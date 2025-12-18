@@ -8,23 +8,31 @@ export function SectionNav() {
   const { sections } = PORTFOLIO_DATA.navigation;
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
+    const handleScroll = () => {
+      const viewportCenter = window.innerHeight / 2;
+      let closestSection = sections[0].id;
+      let closestDistance = Infinity;
+
+      sections.forEach(({ id }) => {
+        const element = document.getElementById(id);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          const elementCenter = rect.top + rect.height / 2;
+          const distance = Math.abs(elementCenter - viewportCenter);
+
+          if (distance < closestDistance) {
+            closestDistance = distance;
+            closestSection = id;
           }
-        });
-      },
-      { threshold: 0.3, rootMargin: "-20% 0px -60% 0px" }
-    );
+        }
+      });
 
-    sections.forEach(({ id }) => {
-      const element = document.getElementById(id);
-      if (element) observer.observe(element);
-    });
+      setActiveSection(closestSection);
+    };
 
-    return () => observer.disconnect();
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [sections]);
 
   const scrollToSection = (id: string) => {
@@ -43,7 +51,7 @@ export function SectionNav() {
             onClick={() => scrollToSection(id)}
             className={`w-2 h-2 rounded-full transition-all duration-300 ${
               activeSection === id
-                ? "bg-momentum-green scale-150"
+                ? "bg-zinc-900 scale-150"
                 : "bg-zinc-300 hover:bg-zinc-400 hover:scale-125"
             }`}
             aria-label={`Navigate to ${label}`}
