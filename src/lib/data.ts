@@ -1,5 +1,5 @@
 // lib/data.ts
-import { Activity, TrendingUp, Unlock, BookOpen, BarChart4 } from 'lucide-react';
+import { Activity, TrendingUp, Unlock, BookOpen, BarChart4, Terminal } from 'lucide-react';
 
 export const PORTFOLIO_DATA = {
   header: {
@@ -138,6 +138,30 @@ export const PORTFOLIO_DATA = {
       { asset: "TypeScript / Next.js", weight: "20%", sentiment: "Long", type: "Dashboard/UI" },
       { asset: "SQL / Time-Series DBs", weight: "10%", sentiment: "Long", type: "Data Storage" },
       { asset: "Rust / Low-Latency Systems", weight: "5%", sentiment: "Speculative", type: "R&D" }
+    ]
+  },
+
+  // SECTION: TECH STACK
+  techStack: {
+    title: "Tech Stack",
+    icon: Terminal,
+    categories: [
+      {
+        name: "Quantitative",
+        tools: ["Python", "Pandas", "NumPy", "TA-Lib", "Backtrader"]
+      },
+      {
+        name: "Data & APIs",
+        tools: ["WebSockets", "REST APIs", "PostgreSQL", "Redis"]
+      },
+      {
+        name: "Web Development",
+        tools: ["TypeScript", "React", "Next.js", "Tailwind CSS"]
+      },
+      {
+        name: "Infrastructure",
+        tools: ["Git", "Docker", "Linux", "Cloud Deployment"]
+      }
     ]
   },
 
