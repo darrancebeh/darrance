@@ -141,6 +141,32 @@ export const PORTFOLIO_DATA = {
     ]
   },
 
+  // SECTION: PORTFOLIO ALLOCATION
+  alpha: {
+    title: "Capital Allocation",
+    icon: BarChart4,
+    data: [
+      { 
+        category: "Discretionary Holdings", 
+        weight: "70%", 
+        description: "Active position trading in US equities. High-conviction plays based on momentum and technical structure.",
+        region: "US"
+      },
+      { 
+        category: "Long-Term Holdings", 
+        weight: "20%", 
+        description: "Passive core allocation in US index ETFs. Strategic beta exposure for portfolio stability.",
+        region: "US ETFs"
+      },
+      { 
+        category: "Speculative Risk Assets", 
+        weight: "10%", 
+        description: "High-risk, high-reward positions. Volatility plays and event-driven opportunities.",
+        region: "US"
+      }
+    ]
+  },
+
   // SECTION: TECH STACK
   techStack: {
     title: "Tech Stack",
@@ -213,7 +239,7 @@ export const PORTFOLIO_DATA = {
       { id: "positions", label: "Experience" },
       { id: "thesis", label: "Philosophy" },
       { id: "breakout", label: "Research" },
-      { id: "alpha", label: "Holdings" },
+      { id: "alpha", label: "Allocation" },
       { id: "tech-stack", label: "Tech" },
       { id: "liquidity", label: "Contact" }
     ]
