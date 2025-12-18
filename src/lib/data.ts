@@ -37,7 +37,11 @@ export const PORTFOLIO_DATA = {
         status: "OPEN",
         entry: "2023",
         exit: "PRESENT",
+        progress: 50,
         strategy: "Systematic + Discretionary", 
+        badges: [
+          { text: "Active", icon: "activity", color: "green" }
+        ],
         thesis: "Personal quantitative trading operation focused on generating alpha. Building proprietary models and trading infrastructure. Daily market analysis, strategy backtesting, and systematic execution across momentum and macro strategies. Visit prismlake.com for more.",
         roi: [
           "Developed multi-factor momentum models with backtested Sharpe > 1.8.",
@@ -53,7 +57,11 @@ export const PORTFOLIO_DATA = {
         status: "INCOMING",
         entry: "Jan 2026",
         exit: "Apr 2026",
-        strategy: "Quantitative Analytics", 
+        progress: 0,
+        strategy: "Quantitative Analytics",
+        badges: [
+          { text: "Top 0.2%", icon: "trophy", color: "amber" }
+        ],
         thesis: "Selected from 1000+ applicants (2 positions) to apply systematic analytical thinking to consumer data patterns at the world's leading beauty company. Market Basket Analysis uses similar pattern recognition techniques as financial factor research—identifying correlations, building predictive models, and optimizing recommendations.",
         roi: [
           "Market Basket Analysis: Developing recommendation algorithms based on pattern recognition in purchase behavior (analogous to factor discovery in quant finance).",
@@ -68,7 +76,11 @@ export const PORTFOLIO_DATA = {
         status: "EVOLVED",
         entry: "2020",
         exit: "2023",
+        progress: 100,
         strategy: "Global Macro / Catalyst",
+        badges: [
+          { text: "5Y Track Record", icon: "calendar", color: "gray" }
+        ],
         thesis: "Started with RM600 seed capital. Traded volatility during major market catalysts (COVID, inflation, rate cycles). Evolved from discretionary execution to Python-based systematic strategies, leading to Prism Lake.",
         roi: [
           "Scaled RM600 → 6-figures (MYR) through disciplined risk management and catalyst-driven entries.",
