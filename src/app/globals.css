@@ -74,7 +74,18 @@ html {
 
 /* Base Styles */
 body {
-  @apply bg-cream-50 text-zinc-700 antialiased min-h-screen selection:bg-momentum-green/15;
+  @apply bg-cream-50 text-zinc-700 antialiased min-h-screen;
+}
+
+/* Text selection color - darker ash grey */
+::selection {
+  background-color: #18181b !important;
+  color: #fafaf9 !important;
+}
+
+::-moz-selection {
+  background-color: #18181b !important;
+  color: #fafaf9 !important;
 }
 
 /* Typography improvements */

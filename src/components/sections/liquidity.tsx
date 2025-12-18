@@ -14,24 +14,49 @@ export function Liquidity() {
       <SectionHeader title={title} icon={icon} />
       
       {/* UPDATED: Glass Panel */}
-      <div className="glass-panel p-8 rounded-2xl text-center md:text-left flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden">
+      <div className="glass-panel p-8 md:p-10 rounded-2xl relative overflow-hidden">
         
         {/* Decorative background glow inside the card */}
         <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-zinc-100/50 to-transparent pointer-events-none" />
 
-        <div className="max-w-md relative z-10">
-          <div className="flex items-center gap-2 justify-center md:justify-start mb-3">
-            <div className="w-2 h-2 bg-zinc-900 rounded-full shadow-[0_0_10px_rgba(0,0,0,0.2)]"></div>
+        <div className="relative z-10 space-y-8">
+          {/* Header */}
+          <div className="flex items-center gap-2">
+            <div className="w-2 h-2 bg-momentum-green rounded-full shadow-[0_0_10px_rgba(134,167,137,0.4)] animate-pulse"></div>
             <span className="text-xs font-mono text-zinc-900/80 uppercase tracking-widest font-semibold">
               {status}
             </span>
           </div>
-          <p className="text-zinc-600 text-sm leading-relaxed mb-4">
+
+          {/* Bio */}
+          <p className="text-zinc-600 text-base leading-relaxed max-w-2xl">
             {bio}
           </p>
           
+          {/* Actions Grid */}
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+            {/* Primary CTA - Cream/Grey */}
+            <a 
+              href={`mailto:${email}`}
+              className="group px-8 py-4 bg-gradient-to-br from-cream-100 to-zinc-100 text-zinc-900 text-sm font-semibold rounded-xl hover:from-zinc-200 hover:to-zinc-300 transition-all hover-lift shadow-lg shadow-zinc-900/5 border border-zinc-200/50 flex items-center justify-center gap-2"
+            >
+              <span>{cta}</span>
+              <span className="text-zinc-400 group-hover:text-zinc-600 transition-colors">→</span>
+            </a>
+            
+            {/* Secondary - Resume Download */}
+            <a 
+              href="/resume.pdf"
+              download
+              className="px-6 py-4 glass-card text-zinc-600 text-sm font-medium rounded-xl transition-all hover-lift flex items-center justify-center gap-2 border border-zinc-900/5"
+            >
+              <Download className="w-4 h-4" />
+              <span>Download Resume</span>
+            </a>
+          </div>
+
           {/* Social Links */}
-          <div className="flex items-center gap-4 justify-center md:justify-start">
+          <div className="flex items-center gap-6 pt-4 border-t border-zinc-900/5">
             <a 
               href={github}
               target="_blank"
@@ -50,25 +75,8 @@ export function Liquidity() {
               <Linkedin className="w-4 h-4" />
               <span>LinkedIn</span>
             </a>
+            <span className="text-xs text-zinc-400 font-mono">{email}</span>
           </div>
-        </div>
-        
-        <div className="flex flex-col sm:flex-row gap-3 relative z-10">
-          <a 
-            href={`mailto:${email}`}
-            className="whitespace-nowrap px-6 py-3 bg-zinc-900 dark:bg-neon-600 text-zinc-50 dark:text-charcoal-950 text-sm font-medium rounded-lg hover:bg-zinc-800 dark:hover:bg-neon-500 transition-all hover:scale-[1.02] shadow-lg shadow-zinc-900/10"
-          >
-            {cta}
-          </a>
-          
-          <a 
-            href="/resume.pdf"
-            download
-            className="whitespace-nowrap hover-lift px-6 py-3 glass-card text-zinc-700 dark:text-zinc-300 text-sm font-medium rounded-lg transition-all flex items-center gap-2 justify-center"
-          >
-            <Download className="w-4 h-4" />
-            Resume
-          </a>
         </div>
       </div>
     </section>
