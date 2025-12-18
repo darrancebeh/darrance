@@ -35,13 +35,13 @@ export function Liquidity() {
           
           {/* Actions Grid */}
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
-            {/* Primary CTA - Cream/Grey */}
+            {/* Primary CTA - Zinc 900 */}
             <a 
               href={`mailto:${email}`}
-              className="group px-8 py-4 bg-gradient-to-br from-cream-100 to-zinc-100 text-zinc-900 text-sm font-semibold rounded-xl hover:from-zinc-200 hover:to-zinc-300 transition-all hover-lift shadow-lg shadow-zinc-900/5 border border-zinc-200/50 flex items-center justify-center gap-2"
+              className="group px-8 py-4 bg-zinc-900 text-cream-50 text-sm font-semibold rounded-xl hover:bg-zinc-800 transition-all hover-lift shadow-lg shadow-zinc-900/20 flex items-center justify-center gap-2"
             >
               <span>{cta}</span>
-              <span className="text-zinc-400 group-hover:text-zinc-600 transition-colors">→</span>
+              <span className="text-zinc-400 group-hover:text-zinc-300 transition-colors">→</span>
             </a>
             
             {/* Secondary - Resume Download */}

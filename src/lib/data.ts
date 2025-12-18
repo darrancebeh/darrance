@@ -201,7 +201,7 @@ export const PORTFOLIO_DATA = {
     icon: Unlock,
     status: "ACTIVE TRADER | OPEN TO QUANT OPPORTUNITIES",
     bio: "Currently focused on systematic trading at Prism Lake while diversifying analytical experience. Interested in quantitative research and trading roles that leverage systematic strategy development, pattern recognition, and market analysis. Open to summer 2026 and full-time 2027 opportunities in quantitative finance.",
-    email: "darrance@prismlake.com",
+    email: "darrancebeh@gmail.com",
     github: "https://github.com/darrancebeh",
     linkedin: "https://linkedin.com/in/darrance-beh",
     cta: "Get in Touch"
