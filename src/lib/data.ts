@@ -7,7 +7,7 @@ export const PORTFOLIO_DATA = {
     exchange: "QUANT.TRADER"
   },
   hero: {
-    name: "Darrance Beh",
+    name: "Darrance Beh.",
     portrait: "/portrait.jpg", // Add your portrait image to /public/portrait.jpg
     socials: {
       github: "https://github.com/darrancebeh",
