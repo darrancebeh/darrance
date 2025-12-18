@@ -1,8 +1,9 @@
 import { PORTFOLIO_DATA } from "@/lib/data";
 import { TrendingUp, Github, Linkedin, Mail } from "lucide-react";
+import Image from "next/image";
 
 export function Hero() {
-  const { name, role, bio, sub_bio, metrics, socials } = PORTFOLIO_DATA.hero;
+  const { name, role, bio, sub_bio, metrics, socials, portrait } = PORTFOLIO_DATA.hero;
   const { ticker, exchange } = PORTFOLIO_DATA.header;
 
   return (
@@ -74,6 +75,22 @@ export function Hero() {
             <p className="text-sm font-mono text-zinc-400">
               // {sub_bio}
             </p>
+          </div>
+          
+          {/* Portrait - Polaroid Style */}
+          <div className="flex justify-center md:justify-end md:-mt-32">
+            <div className="relative rotate-3 bg-white p-4 pb-8 shadow-xl">
+              <div className="w-56 h-64 overflow-hidden">
+                <Image 
+                  src={portrait} 
+                  alt={name}
+                  width={224}
+                  height={256}
+                  className="w-full h-full object-cover"
+                  priority
+                />
+              </div>
+            </div>
           </div>
         </div>
 

@@ -8,6 +8,7 @@ export const PORTFOLIO_DATA = {
   },
   hero: {
     name: "Darrance Beh",
+    portrait: "/portrait.jpg", // Add your portrait image to /public/portrait.jpg
     socials: {
       github: "https://github.com/darrancebeh",
       linkedin: "https://linkedin.com/in/darrance-beh",

@@ -29,11 +29,11 @@ export default function RootLayout({
       >
         {/* --- LAYER 1: Ambient Background Orbs --- */}
         <div className="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
-          {/* Top Left - Subtle Cream Glow */}
-          <div className="absolute top-0 left-[-10%] w-[500px] h-[500px] bg-zinc-900/8 rounded-full blur-[120px] mix-blend-multiply opacity-40 animate-blob" />
+          {/* Top Left - Subtle Green Glow */}
+          <div className="absolute top-0 left-[-10%] w-[500px] h-[500px] bg-momentum-green/15 rounded-full blur-[120px] mix-blend-multiply opacity-50 animate-blob" />
           
-          {/* Top Right - Subtle Dark Accent */}
-          <div className="absolute top-0 right-[-10%] w-[500px] h-[500px] bg-zinc-900/8 rounded-full blur-[120px] mix-blend-multiply opacity-40 animate-blob animation-delay-2000" />
+          {/* Top Right - Subtle Warm Accent */}
+          <div className="absolute top-0 right-[-10%] w-[500px] h-[500px] bg-accent-warm/12 rounded-full blur-[120px] mix-blend-multiply opacity-40 animate-blob animation-delay-2000" />
           
           {/* Bottom - Warm Cream Base */}
           <div className="absolute bottom-[-20%] left-[20%] w-[600px] h-[600px] bg-cream-200/60 rounded-full blur-[100px] mix-blend-multiply opacity-50 animate-blob animation-delay-4000" />
