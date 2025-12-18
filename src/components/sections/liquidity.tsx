@@ -1,11 +1,16 @@
 import { PORTFOLIO_DATA } from "@/lib/data";
 import { SectionHeader } from "@/components/ui/section-header";
+import { Github, Linkedin } from "lucide-react";
 
 export function Liquidity() {
-  const { title, icon, status, bio, email, cta } = PORTFOLIO_DATA.liquidity;
+  const { title, icon, status, bio, email, github, linkedin, cta } = PORTFOLIO_DATA.liquidity;
 
   return (
-    <section className="mb-12">
+    <section className="mb-12 relative">
+      {/* Glass Background Accents */}
+      <div className="absolute -top-20 left-[15%] w-72 h-72 bg-gradient-to-br from-white/20 to-transparent backdrop-blur-3xl rounded-full -z-10" />
+      <div className="absolute bottom-0 right-[10%] w-40 h-40 bg-cream-200/30 backdrop-blur-2xl border border-zinc-900/5 rounded-2xl rotate-12 -z-10" />
+      
       <SectionHeader title={title} icon={icon} />
       
       {/* UPDATED: Glass Panel */}
@@ -16,14 +21,36 @@ export function Liquidity() {
 
         <div className="max-w-md relative z-10">
           <div className="flex items-center gap-2 justify-center md:justify-start mb-3">
-            <div className="w-2 h-2 bg-emerald-500 rounded-full shadow-[0_0_10px_rgba(16,185,129,0.4)]"></div>
-            <span className="text-xs font-mono text-emerald-700/80 uppercase tracking-widest font-semibold">
+            <div className="w-2 h-2 bg-zinc-900 rounded-full shadow-[0_0_10px_rgba(0,0,0,0.2)]"></div>
+            <span className="text-xs font-mono text-zinc-900/80 uppercase tracking-widest font-semibold">
               {status}
             </span>
           </div>
-          <p className="text-zinc-600 text-sm leading-relaxed">
+          <p className="text-zinc-600 text-sm leading-relaxed mb-4">
             {bio}
           </p>
+          
+          {/* Social Links */}
+          <div className="flex items-center gap-4 justify-center md:justify-start">
+            <a 
+              href={github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-xs text-zinc-500 hover:text-zinc-900 transition-colors"
+            >
+              <Github className="w-4 h-4" />
+              <span>GitHub</span>
+            </a>
+            <a 
+              href={linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-xs text-zinc-500 hover:text-zinc-900 transition-colors"
+            >
+              <Linkedin className="w-4 h-4" />
+              <span>LinkedIn</span>
+            </a>
+          </div>
         </div>
         
         <a 

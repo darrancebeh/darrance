@@ -5,7 +5,10 @@ export function Alpha() {
   const { title, icon, data } = PORTFOLIO_DATA.alpha;
 
   return (
-    <section className="mb-24">
+    <section className="mb-24 relative">
+      {/* Decorative Glass Card */}
+      <div className="absolute top-[10%] left-[-8%] w-52 h-36 bg-cream-100/25 backdrop-blur-2xl border border-zinc-900/5 rounded-xl -rotate-6 -z-10" />
+      
       <SectionHeader title={title} icon={icon} />
       
       <div className="glass-panel p-6 rounded-xl">

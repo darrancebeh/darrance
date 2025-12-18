@@ -1,13 +1,19 @@
 @import "tailwindcss";
 
 @theme {
-  /* The "Soft Data" Palette - OKLCH for perceptual smoothness */
+  /* Monochromatic Cream & Black Palette */
   --color-glass-border: oklch(0 0 0 / 0.08);
-  --color-glass-surface: oklch(1 0 0 / 0.65);
-  --color-glass-highlight: oklch(1 0 0 / 0.9);
+  --color-glass-surface: oklch(0.96 0.005 85 / 0.7);
+  --color-glass-highlight: oklch(0.98 0.005 85 / 0.95);
   
-  --color-momentum-green: oklch(0.86 0.18 145.33); 
-  --color-catalyst-blue: oklch(0.75 0.15 235.33); 
+  /* Cream tones */
+  --color-cream-50: oklch(0.99 0.005 85);
+  --color-cream-100: oklch(0.97 0.008 85);
+  --color-cream-200: oklch(0.93 0.01 85);
+  
+  /* Monochrome blacks */
+  --color-momentum-green: oklch(0.21 0 0); /* Now pure black */
+  --color-catalyst-blue: oklch(0.21 0 0); /* Now pure black */
   --color-zinc-900: oklch(0.21 0.006 285.885);
   --color-zinc-500: oklch(0.55 0.02 285.885);
 
@@ -24,22 +30,22 @@
   }
 
   .glass-card {
-    @apply backdrop-blur-xl bg-white/40 border border-white/50 transition-all duration-500;
+    @apply backdrop-blur-xl bg-cream-100/60 border border-cream-200/80 transition-all duration-500;
     box-shadow: 
-      0 4px 6px -1px rgba(0, 0, 0, 0.02),
+      0 4px 6px -1px rgba(0, 0, 0, 0.03),
       0 2px 4px -1px rgba(0, 0, 0, 0.02),
-      inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+      inset 0 0 0 1px rgba(250, 248, 245, 0.8);
   }
 
   .glass-card:hover {
-    @apply bg-white/60 -translate-y-1 shadow-[0_20px_40px_-12px_rgba(0,0,0,0.05)];
-    border-color: rgba(255, 255, 255, 0.9);
+    @apply bg-cream-100/80 -translate-y-1 shadow-[0_20px_40px_-12px_rgba(0,0,0,0.08)];
+    border-color: rgba(0, 0, 0, 0.1);
   }
 }
 
 /* Base Styles */
 body {
-  @apply bg-zinc-50 text-zinc-900 antialiased min-h-screen selection:bg-momentum-green/20;
+  @apply bg-cream-50 text-zinc-900 antialiased min-h-screen selection:bg-zinc-900/15;
 }
 
 /* FILM GRAIN TEXTURE 

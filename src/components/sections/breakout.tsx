@@ -6,7 +6,10 @@ export function Breakout() {
   const { title, icon, data } = PORTFOLIO_DATA.breakout;
 
   return (
-    <section className="mb-24">
+    <section className="mb-24 relative">
+      {/* Glass Accent */}
+      <div className="absolute top-[30%] right-[-5%] w-56 h-56 bg-gradient-to-bl from-white/15 to-cream-100/10 backdrop-blur-3xl rounded-full -z-10" />
+      
       <SectionHeader title={title} icon={icon} />
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
