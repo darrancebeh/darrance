@@ -5,7 +5,7 @@ export function TechStack() {
   const { title, icon, categories } = PORTFOLIO_DATA.techStack;
 
   return (
-    <section className="mb-24 relative">
+    <section id="tech-stack" className="mb-24 relative">
       <SectionHeader title={title} icon={icon} />
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

@@ -6,7 +6,7 @@ export function Liquidity() {
   const { title, icon, status, bio, email, github, linkedin, cta } = PORTFOLIO_DATA.liquidity;
 
   return (
-    <section className="mb-12 relative">
+    <section id="liquidity" className="mb-12 relative">
       {/* Glass Background Accents */}
       <div className="absolute -top-20 left-[15%] w-72 h-72 bg-gradient-to-br from-white/20 to-transparent backdrop-blur-3xl rounded-full -z-10" />
       <div className="absolute bottom-0 right-[10%] w-40 h-40 bg-cream-200/30 backdrop-blur-2xl border border-zinc-900/5 rounded-2xl rotate-12 -z-10" />
@@ -64,7 +64,7 @@ export function Liquidity() {
           <a 
             href="/resume.pdf"
             download
-            className="whitespace-nowrap px-6 py-3 glass-card text-zinc-700 dark:text-zinc-300 text-sm font-medium rounded-lg hover:scale-[1.02] transition-all flex items-center gap-2 justify-center"
+            className="whitespace-nowrap hover-lift px-6 py-3 glass-card text-zinc-700 dark:text-zinc-300 text-sm font-medium rounded-lg transition-all flex items-center gap-2 justify-center"
           >
             <Download className="w-4 h-4" />
             Resume

@@ -6,7 +6,7 @@ export function Thesis() {
   const { title, icon, researchLink, featuredArticle } = PORTFOLIO_DATA.thesis;
 
   return (
-    <section className="mb-24 relative">
+    <section id="thesis" className="mb-24 relative">
       {/* Glassmorphic Background Elements */}
       <div className="absolute -top-10 right-[10%] w-48 h-48 bg-white/20 backdrop-blur-2xl border border-zinc-900/5 rounded-2xl rotate-12 -z-10" />
       <div className="absolute bottom-[20%] left-[5%] w-40 h-40 bg-cream-100/30 backdrop-blur-2xl border border-zinc-900/8 rounded-full -z-10" />
@@ -18,7 +18,7 @@ export function Thesis() {
         href={featuredArticle.link}
         target="_blank"
         rel="noopener noreferrer"
-        className="group glass-panel p-8 md:p-10 rounded-2xl mb-8 block relative overflow-hidden border-2 border-zinc-900/15 hover:border-zinc-900/30 transition-all hover:shadow-[0_20px_70px_-12px_rgba(0,0,0,0.15)]"
+        className="group glass-panel hover-lift p-8 md:p-10 rounded-2xl mb-8 block relative overflow-hidden border-2 border-zinc-900/15 hover:border-zinc-900/30 transition-all hover:shadow-[0_20px_70px_-12px_rgba(0,0,0,0.15)]"
       >
         {/* Decorative gradient */}
         <div className="absolute inset-0 bg-gradient-to-br from-zinc-900/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />

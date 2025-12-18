@@ -205,5 +205,17 @@ export const PORTFOLIO_DATA = {
     github: "https://github.com/darrancebeh",
     linkedin: "https://linkedin.com/in/darrance-beh",
     cta: "Get in Touch"
+  },
+
+  navigation: {
+    sections: [
+      { id: "hero", label: "Intro" },
+      { id: "positions", label: "Experience" },
+      { id: "thesis", label: "Philosophy" },
+      { id: "breakout", label: "Research" },
+      { id: "alpha", label: "Holdings" },
+      { id: "tech-stack", label: "Tech" },
+      { id: "liquidity", label: "Contact" }
+    ]
   }
 };

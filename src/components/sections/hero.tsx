@@ -24,7 +24,7 @@ export function Hero() {
       </header>
 
       {/* HERO CONTENT */}
-      <section className="mb-24 relative">
+      <section id="hero" className="mb-24 relative">
         
         {/* Glassmorphic Accent */}
         <div className="absolute -top-20 -right-10 w-80 h-80 bg-gradient-to-br from-white/20 to-cream-100/10 backdrop-blur-3xl rounded-full -z-10 opacity-60" />
@@ -80,8 +80,8 @@ export function Hero() {
           </div>
           
           {/* Portrait - Polaroid Style */}
-          <div className="flex justify-center md:justify-end md:-mt-32">
-            <div className="relative rotate-3 bg-white p-4 pb-8 shadow-xl">
+          <div className="flex justify-center md:justify-end md:-mt-32 mt-6 md:mt-0">
+            <div className="relative rotate-3 bg-white p-4 pb-8 shadow-xl scale-90 md:scale-100">
               <div className="w-56 h-64 overflow-hidden">
                 <Image 
                   src={portrait} 

@@ -6,7 +6,7 @@ export function Breakout() {
   const { title, icon, data } = PORTFOLIO_DATA.breakout;
 
   return (
-    <section className="mb-24 relative">
+    <section id="breakout" className="mb-24 relative">
       {/* Glass Accent */}
       <div className="absolute top-[30%] right-[-5%] w-56 h-56 bg-gradient-to-bl from-white/15 to-cream-100/10 backdrop-blur-3xl rounded-full -z-10" />
       
@@ -18,7 +18,7 @@ export function Breakout() {
             key={i} 
             href={project.link}
             // UPDATED: Using the new glass-card utility
-            className="group glass-card p-6 rounded-xl relative overflow-hidden"
+            className="group glass-card hover-lift p-6 rounded-xl relative overflow-hidden"
           >
             {/* Subtle Gradient overlay on hover for that "Liquid" feel */}
             <div className="absolute inset-0 bg-gradient-to-br from-white/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />

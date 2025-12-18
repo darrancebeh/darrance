@@ -20,7 +20,7 @@ export function Positions() {
   };
 
   return (
-    <section className="mb-24 relative">
+    <section id="positions" className="mb-24 relative">
       <SectionHeader title={title} icon={icon} />
       
       <div className="space-y-6">
