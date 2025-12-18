@@ -29,14 +29,6 @@ export function Footer() {
               <Github className="w-4 h-4" />
               <span className="hidden sm:inline">Source</span>
             </a>
-            <a
-              href="https://vercel.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1.5 hover:text-zinc-700 transition-colors"
-            >
-              
-            </a>
           </div>
 
           {/* Copyright */}

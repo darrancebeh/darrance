@@ -1,10 +1,27 @@
+"use client";
+
 import { PORTFOLIO_DATA } from "@/lib/data";
 import { TrendingUp, Github, Linkedin, Mail } from "lucide-react";
 import Image from "next/image";
+import { useState, useEffect } from "react";
 
 export function Hero() {
   const { name, role, bio, sub_bio, metrics, socials, portrait } = PORTFOLIO_DATA.hero;
   const { ticker, exchange } = PORTFOLIO_DATA.header;
+  const [currentTime, setCurrentTime] = useState<string>("");
+
+  useEffect(() => {
+    const updateTime = () => {
+      const now = new Date();
+      const hours = now.getHours().toString().padStart(2, "0");
+      const minutes = now.getMinutes().toString().padStart(2, "0");
+      setCurrentTime(`${hours}:${minutes}`);
+    };
+    
+    updateTime();
+    const interval = setInterval(updateTime, 60000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <>
@@ -18,7 +35,7 @@ export function Hero() {
         </div>
         <div className="flex items-center gap-4">
           <span className="text-xs font-mono text-zinc-400">
-            <span className="text-zinc-900">●</span> MARKET OPEN
+            <span className="text-zinc-900">●</span> {currentTime || "--:--"}
           </span>
         </div>
       </header>
