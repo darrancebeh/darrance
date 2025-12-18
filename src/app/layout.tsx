@@ -27,10 +27,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} font-sans tracking-tight relative overflow-x-hidden`}
       >
-        {/* --- LAYER 1: Ambient Background Orbs --- */}
-        <div className="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
-          {/* Top Left - Subtle Green Glow */}
-          <div className="absolute top-0 left-[-10%] w-[500px] h-[500px] bg-momentum-green/15 rounded-full blur-[120px] mix-blend-multiply opacity-50 animate-blob" />
+          {/* --- LAYER 1: Ambient Background Orbs --- */}
+          <div className="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
+            {/* Top Left - Subtle Green Glow */}
+            <div className="absolute top-0 left-[-10%] w-[500px] h-[500px] bg-momentum-green/15 rounded-full blur-[120px] mix-blend-multiply opacity-50 animate-blob" />
           
           {/* Top Right - Subtle Warm Accent */}
           <div className="absolute top-0 right-[-10%] w-[500px] h-[500px] bg-accent-warm/12 rounded-full blur-[120px] mix-blend-multiply opacity-40 animate-blob animation-delay-2000" />

@@ -19,11 +19,34 @@
   --color-zinc-900: oklch(0.21 0.006 285.885);
   --color-zinc-500: oklch(0.55 0.02 285.885);
 
+  /* Dark mode colors - Charcoal + Neon Green */
+  --color-charcoal-950: oklch(0.15 0.01 240);
+  --color-charcoal-900: oklch(0.20 0.015 240);
+  --color-charcoal-800: oklch(0.25 0.02 240);
+  --color-charcoal-100: oklch(0.85 0.01 240);
+  
+  --color-neon-500: oklch(0.65 0.20 145);
+  --color-neon-600: oklch(0.55 0.18 145);
+  --color-electric-500: oklch(0.70 0.18 75);
+
   --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui;
   --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular;
 }
 
 @layer utilities {
+  /* Dark mode text utilities */
+  .dark .text-zinc-600 {
+    color: oklch(0.65 0.01 240);
+  }
+  
+  .dark .text-zinc-700 {
+    color: oklch(0.55 0.01 240);
+  }
+  
+  .dark .text-zinc-400 {
+    color: oklch(0.75 0.01 240);
+  }
+
   /* The High-End Glass Effect */
   .glass-panel {
     @apply backdrop-blur-2xl bg-glass-surface border border-white/40 shadow-[0_4px_24px_-12px_rgba(0,0,0,0.1)];
@@ -47,7 +70,37 @@
 
 /* Base Styles */
 body {
-  @apply bg-cream-50 text-zinc-900 antialiased min-h-screen selection:bg-momentum-green/15;
+  @apply bg-cream-50 text-zinc-700 antialiased min-h-screen selection:bg-momentum-green/15;
+}
+
+/* Typography improvements */
+h1, h2, h3 {
+  @apply text-zinc-900;
+}
+
+/* Monospace for all metrics */
+.metric-value {
+  @apply font-mono;
+}
+
+.dark .glass-panel {
+  background: oklch(0.18 0.015 240 / 0.4);
+  border-color: oklch(0.30 0.02 240 / 0.3);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+.dark .glass-card {
+  background: oklch(0.20 0.015 240 / 0.5);
+  border-color: oklch(0.35 0.02 240 / 0.4);
+  box-shadow: 
+    0 4px 6px -1px rgba(0, 0, 0, 0.3),
+    0 2px 4px -1px rgba(0, 0, 0, 0.2),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.dark .glass-card:hover {
+  background: oklch(0.22 0.015 240 / 0.6);
+  border-color: oklch(0.40 0.02 240 / 0.5);
 }
 
 /* FILM GRAIN TEXTURE 

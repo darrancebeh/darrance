@@ -3,7 +3,7 @@ import { SectionHeader } from "@/components/ui/section-header";
 import { ArrowUpRight, FileText } from "lucide-react";
 
 export function Thesis() {
-  const { title, icon, content, researchLink, featuredArticle } = PORTFOLIO_DATA.thesis;
+  const { title, icon, researchLink, featuredArticle } = PORTFOLIO_DATA.thesis;
 
   return (
     <section className="mb-24 relative">

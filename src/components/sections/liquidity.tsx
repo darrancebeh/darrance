@@ -1,6 +1,6 @@
 import { PORTFOLIO_DATA } from "@/lib/data";
 import { SectionHeader } from "@/components/ui/section-header";
-import { Github, Linkedin } from "lucide-react";
+import { Github, Linkedin, Download } from "lucide-react";
 
 export function Liquidity() {
   const { title, icon, status, bio, email, github, linkedin, cta } = PORTFOLIO_DATA.liquidity;
@@ -53,12 +53,23 @@ export function Liquidity() {
           </div>
         </div>
         
-        <a 
-          href={`mailto:${email}`}
-          className="relative z-10 whitespace-nowrap px-6 py-3 bg-zinc-900 text-zinc-50 text-sm font-medium rounded-lg hover:bg-zinc-800 transition-all hover:scale-[1.02] shadow-lg shadow-zinc-900/10"
-        >
-          {cta}
-        </a>
+        <div className="flex flex-col sm:flex-row gap-3 relative z-10">
+          <a 
+            href={`mailto:${email}`}
+            className="whitespace-nowrap px-6 py-3 bg-zinc-900 dark:bg-neon-600 text-zinc-50 dark:text-charcoal-950 text-sm font-medium rounded-lg hover:bg-zinc-800 dark:hover:bg-neon-500 transition-all hover:scale-[1.02] shadow-lg shadow-zinc-900/10"
+          >
+            {cta}
+          </a>
+          
+          <a 
+            href="/resume.pdf"
+            download
+            className="whitespace-nowrap px-6 py-3 glass-card text-zinc-700 dark:text-zinc-300 text-sm font-medium rounded-lg hover:scale-[1.02] transition-all flex items-center gap-2 justify-center"
+          >
+            <Download className="w-4 h-4" />
+            Resume
+          </a>
+        </div>
       </div>
     </section>
   );

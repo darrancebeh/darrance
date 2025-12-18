@@ -16,9 +16,11 @@ export function Hero() {
             {ticker} <span className="text-zinc-300 mx-1">::</span> {exchange}
           </span>
         </div>
-        <span className="text-xs font-mono text-zinc-400">
-           <span className="text-zinc-900">●</span> MARKET OPEN
-        </span>
+        <div className="flex items-center gap-4">
+          <span className="text-xs font-mono text-zinc-400">
+            <span className="text-zinc-900">●</span> MARKET OPEN
+          </span>
+        </div>
       </header>
 
       {/* HERO CONTENT */}
@@ -69,11 +71,11 @@ export function Hero() {
         {/* The "Thesis" (Bio) */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           <div className="md:col-span-2">
-            <p className="text-lg text-zinc-600 leading-relaxed text-balance mb-4">
+            <p className="text-lg text-zinc-700 leading-relaxed text-balance mb-4">
               {bio}
             </p>
-            <p className="text-sm font-mono text-zinc-400">
-              // {sub_bio}
+            <p className="text-sm font-mono text-zinc-500">
+              {`// ${sub_bio}`}
             </p>
           </div>
           
@@ -98,47 +100,19 @@ export function Hero() {
         <div className="glass-panel p-6 md:p-8 rounded-2xl">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-y-8 gap-x-4">
             
-            {/* Metric 1: Inception */}
-            <div className="flex flex-col">
-              <span className="text-[10px] font-mono uppercase tracking-widest text-zinc-400 mb-1">
-                {metrics[0].label}
-              </span>
-              <span className="font-mono text-lg text-zinc-700">
-                {metrics[0].value}
-              </span>
-            </div>
-
-            {/* Metric 2: Experience */}
-            <div className="flex flex-col">
-              <span className="text-[10px] font-mono uppercase tracking-widest text-zinc-400 mb-1">
-                {metrics[1].label}
-              </span>
-              <span className="font-mono text-lg text-zinc-700">
-                {metrics[1].value}
-              </span>
-            </div>
-
-            {/* Metric 3: THE FLEX (Highlighted) */}
-            <div className="flex flex-col relative">
-               <div className="absolute -left-3 top-1 w-0.5 h-8 bg-zinc-900/50 hidden md:block"></div>
-              <span className="text-[10px] font-mono uppercase tracking-widest text-zinc-900/80 mb-1 flex items-center gap-1">
-                {metrics[2].label} <TrendingUp className="w-3 h-3" />
-              </span>
-              <span className="font-sans font-bold text-xl text-zinc-900 tracking-tight">
-                {metrics[2].value}
-              </span>
-            </div>
-
-             {/* Metric 4: Strategy */}
-             <div className="flex flex-col">
-              <span className="text-[10px] font-mono uppercase tracking-widest text-zinc-400 mb-1">
-                {metrics[3].label}
-              </span>
-              <span className="font-mono text-sm text-zinc-600 mt-1 leading-tight">
-                {metrics[3].value}
-              </span>
-            </div>
-
+            {metrics.map((metric, idx) => (
+              <div key={idx} className="flex flex-col">
+                <span className="text-[10px] font-mono uppercase tracking-widest text-zinc-400 mb-1">
+                  {metric.label}
+                </span>
+                <span className="font-mono text-lg text-zinc-900">
+                  {metric.value}
+                  {metric.trend === "up" && (
+                    <TrendingUp className="inline-block ml-1 w-4 h-4 text-momentum-green" />
+                  )}
+                </span>
+              </div>
+            ))}
           </div>
         </div>
 
