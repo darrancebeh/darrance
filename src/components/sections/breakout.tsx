@@ -1,6 +1,9 @@
+"use client";
+
 import { ArrowUpRight } from "lucide-react";
 import { PORTFOLIO_DATA } from "@/lib/data";
 import { SectionHeader } from "@/components/ui/section-header";
+import { motion } from "framer-motion";
 
 export function Breakout() {
   const { title, icon, data } = PORTFOLIO_DATA.breakout;
@@ -14,8 +17,12 @@ export function Breakout() {
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {data.map((project, i) => (
-          <a 
-            key={i} 
+          <motion.a
+            key={i}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5, delay: i * 0.1 }}
             href={project.link}
             // UPDATED: Using the new glass-card utility
             className="group glass-card hover-lift p-6 rounded-xl relative overflow-hidden"
@@ -42,7 +49,7 @@ export function Breakout() {
                 ))}
               </div>
             </div>
-          </a>
+          </motion.a>
         ))}
       </div>
     </section>

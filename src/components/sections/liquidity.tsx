@@ -1,6 +1,9 @@
+"use client";
+
 import { PORTFOLIO_DATA } from "@/lib/data";
 import { SectionHeader } from "@/components/ui/section-header";
 import { Github, Linkedin, Download } from "lucide-react";
+import { motion } from "framer-motion";
 
 export function Liquidity() {
   const { title, icon, status, bio, email, github, linkedin, cta } = PORTFOLIO_DATA.liquidity;
@@ -14,7 +17,13 @@ export function Liquidity() {
       <SectionHeader title={title} icon={icon} />
       
       {/* UPDATED: Glass Panel */}
-      <div className="glass-panel p-8 md:p-10 rounded-2xl relative overflow-hidden">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6 }}
+        className="glass-panel p-8 md:p-10 rounded-2xl relative overflow-hidden"
+      >
         
         {/* Decorative background glow inside the card */}
         <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-zinc-100/50 to-transparent pointer-events-none" />
@@ -78,7 +87,7 @@ export function Liquidity() {
             <span className="text-xs text-zinc-400 font-mono">{email}</span>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

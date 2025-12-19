@@ -1,5 +1,8 @@
+"use client";
+
 import { PORTFOLIO_DATA } from "@/lib/data";
 import { SectionHeader } from "@/components/ui/section-header";
+import { motion } from "framer-motion";
 
 export function Alpha() {
   const { title, icon, data } = PORTFOLIO_DATA.alpha;
@@ -8,10 +11,23 @@ export function Alpha() {
     <section id="alpha" className="mb-24 relative">
       <SectionHeader title={title} icon={icon} />
       
-      <div className="glass-panel p-8 rounded-2xl">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6 }}
+        className="glass-panel p-8 rounded-2xl"
+      >
         <div className="space-y-8">
           {data.map((allocation, i) => (
-            <div key={i} className="group">
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              className="group"
+            >
               <div className="flex items-start justify-between mb-3">
                 <div>
                   <div className="flex items-center gap-3 mb-1">
@@ -40,7 +56,7 @@ export function Alpha() {
                   style={{ width: allocation.weight }}
                 />
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 
@@ -50,7 +66,7 @@ export function Alpha() {
             Active allocation as of December 2025 • US Markets Focus
           </p>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

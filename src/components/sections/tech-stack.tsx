@@ -1,5 +1,8 @@
+"use client";
+
 import { PORTFOLIO_DATA } from "@/lib/data";
 import { SectionHeader } from "@/components/ui/section-header";
+import { motion } from "framer-motion";
 
 export function TechStack() {
   const { title, icon, categories } = PORTFOLIO_DATA.techStack;
@@ -10,7 +13,14 @@ export function TechStack() {
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {categories.map((category, i) => (
-          <div key={i} className="glass-card p-6 rounded-xl">
+          <motion.div
+            key={i}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5, delay: i * 0.1 }}
+            className="glass-card p-6 rounded-xl"
+          >
             <h3 className="text-sm font-semibold text-zinc-900 mb-4 tracking-wide">
               {category.name}
             </h3>
@@ -26,7 +36,7 @@ export function TechStack() {
                 </span>
               ))}
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

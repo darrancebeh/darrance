@@ -1,6 +1,9 @@
+"use client";
+
 import { PORTFOLIO_DATA } from "@/lib/data";
 import { SectionHeader } from "@/components/ui/section-header";
 import { ArrowUpRight, FileText } from "lucide-react";
+import { motion } from "framer-motion";
 
 export function Thesis() {
   const { title, icon, researchLink, featuredArticle } = PORTFOLIO_DATA.thesis;
@@ -14,7 +17,11 @@ export function Thesis() {
       <SectionHeader title={title} icon={icon} />
       
       {/* Featured Article - Hero Card */}
-      <a 
+      <motion.a
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
         href={featuredArticle.link}
         target="_blank"
         rel="noopener noreferrer"
@@ -49,10 +56,16 @@ export function Thesis() {
             <ArrowUpRight className="w-4 h-4" />
           </div>
         </div>
-      </a>
+      </motion.a>
       
       {/* CTA to All Research */}
-      <div className="flex justify-center">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        className="flex justify-center"
+      >
         <a 
           href={researchLink}
           target="_blank"
@@ -65,7 +78,7 @@ export function Thesis() {
           </div>
           <ArrowUpRight className="w-5 h-5 text-zinc-400 group-hover:text-zinc-900 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
         </a>
-      </div>
+      </motion.div>
     </section>
   );
 }
