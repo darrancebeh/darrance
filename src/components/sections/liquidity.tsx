@@ -2,7 +2,7 @@
 
 import { PORTFOLIO_DATA } from "@/lib/data";
 import { SectionHeader } from "@/components/ui/section-header";
-import { Github, Linkedin, Download } from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
 import { motion } from "framer-motion";
 
 export function Liquidity() {
@@ -22,11 +22,11 @@ export function Liquidity() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.6 }}
-        className="glass-panel p-8 md:p-10 rounded-2xl relative overflow-hidden"
+        className="glass-panel p-6 md:p-10 rounded-2xl relative overflow-hidden"
       >
         
         {/* Decorative background glow inside the card */}
-        <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-zinc-100/50 to-transparent pointer-events-none" />
+        <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-zinc-100/30 to-transparent pointer-events-none" />
 
         <div className="relative z-10 space-y-8">
           {/* Header */}
@@ -38,29 +38,19 @@ export function Liquidity() {
           </div>
 
           {/* Bio */}
-          <p className="text-zinc-600 text-base leading-relaxed max-w-2xl">
+          <p className="text-zinc-600 text-lg leading-relaxed max-w-2xl">
             {bio}
           </p>
           
-          {/* Actions Grid */}
+          {/* Actions */}
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
             {/* Primary CTA - Zinc 900 */}
             <a 
-              href={`mailto:${email}`}
-              className="group px-8 py-4 bg-zinc-900 text-cream-50 text-sm font-semibold rounded-xl hover:bg-zinc-800 transition-all hover-lift shadow-lg shadow-zinc-900/20 flex items-center justify-center gap-2"
+              href={`mailto:${email}?subject=Opportunity Inquiry`}
+              className="group px-8 py-4 bg-zinc-900 text-cream-50 text-sm font-semibold rounded-xl hover:bg-zinc-800 hover:scale-105 transition-all hover-lift shadow-lg shadow-zinc-900/20 flex items-center justify-center gap-2"
             >
               <span>{cta}</span>
               <span className="text-zinc-400 group-hover:text-zinc-300 transition-colors">→</span>
-            </a>
-            
-            {/* Secondary - Resume Download */}
-            <a 
-              href="/resume.pdf"
-              download
-              className="px-6 py-4 glass-card text-zinc-600 text-sm font-medium rounded-xl transition-all hover-lift flex items-center justify-center gap-2 border border-zinc-900/5"
-            >
-              <Download className="w-4 h-4" />
-              <span>Download Resume</span>
             </a>
           </div>
 

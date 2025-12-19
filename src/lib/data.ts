@@ -241,11 +241,11 @@ export const PORTFOLIO_DATA = {
     title: "Liquidity & Opportunities",
     icon: Unlock,
     status: "ACTIVE TRADER | OPEN TO QUANT OPPORTUNITIES",
-    bio: "Currently focused on systematic trading at Prism Lake while diversifying analytical experience. Interested in quantitative research and trading roles that leverage systematic strategy development, pattern recognition, and market analysis. Open to summer 2026 and full-time 2027 opportunities in quantitative finance.",
+    bio: "Active trader at Prism Lake, seeking roles in quant trading, data science, and systematic strategies. Open to summer 2026 and full-time 2027 opportunities.",
     email: "darrancebeh@gmail.com",
     github: "https://github.com/darrancebeh",
     linkedin: "https://linkedin.com/in/darrance-beh",
-    cta: "Get in Touch"
+    cta: "Discuss Opportunities"
   },
 
   navigation: {
