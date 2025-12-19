@@ -15,7 +15,7 @@ export const PORTFOLIO_DATA = {
       email: "darrancebeh@gmail.com"
     },
     role: "US Market Quant Researcher & Trader",
-    bio: "Being an active US market trader, I specialize in US Equities & Options, combining systematic modeling with discretionary execution to capture alpha from momentum and catalyst-derived inefficiencies. I analyze the markets daily and publish proprietary research on Prism Lake. Seeking Quantitative Research and Trading roles.",
+    bio: "Active US market trader specializing in US Equities & Options I combine systematic modeling with discretionary execution to capture alpha from primarily momentum and catalyst-driven inefficiencies. I analyze markets daily and publish my proprietary research and analysis son Prism Lake. Seeking Quantitative Research and Trading roles.",
     sub_bio: "Computer Science Major | Prism Lake Founder | L'Oréal Data Intern",
     metrics: [
       { label: "Education", value: "Computer Science", tooltip: "Computer Science Major at Lancaster University" },
