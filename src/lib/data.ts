@@ -63,7 +63,7 @@ export const PORTFOLIO_DATA = {
         entry: "Jan 2026",
         exit: "Apr 2026",
         progress: 0,
-        strategy: "Quantitative Analytics",
+        strategy: "Data Analytics",
         location: "Kuala Lumpur, Malaysia",
         badges: [
           { text: "Top 0.2%", icon: "trophy", color: "amber" }
