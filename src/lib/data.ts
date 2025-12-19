@@ -18,10 +18,10 @@ export const PORTFOLIO_DATA = {
     bio: "Being an active US market trader, I specialize in US Equities & Options, combining systematic modeling with discretionary execution to capture alpha from momentum and catalyst-derived inefficiencies. I analyze the markets daily and publish proprietary research on Prism Lake. Seeking Quantitative Research and Trading roles.",
     sub_bio: "Computer Science Major | Prism Lake Founder | L'Oréal Data Intern",
     metrics: [
-      { label: "Education", value: "Computer Science" },
-      { label: "In the Market Experience", value: "5 Years" },
-      { label: "Track Record (Last 5 Years)", value: "RM600 → 6-Figs", trend: "up" },
-      { label: "Strategy", value: "Momentum/Catalyst" }
+      { label: "Education", value: "Computer Science", tooltip: "Computer Science Major at Lancaster University" },
+      { label: "In the Market Experience", value: "5 Years", tooltip: "5 years of active US market trading experience" },
+      { label: "Track Record (Last 5 Years)", value: "RM600 → 6-Figs", trend: "up", tooltip: "Scaled RM600 seed capital to 6-figures through disciplined trading" },
+      { label: "Strategy", value: "Momentum/Catalyst", tooltip: "Specializing in momentum and catalyst-driven trading strategies" }
     ]
   },
   
