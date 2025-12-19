@@ -120,14 +120,7 @@ export function Hero() {
           <h1 
             className="text-5xl md:text-7xl font-sans font-semibold tracking-tighter mb-4 text-balance"
           >
-            <span 
-              className={`inline-block ${
-                isHighlighted && displayText.length > 0 ? 'bg-zinc-900 text-[#fafaf9]' : 'text-zinc-900 bg-transparent'
-              }`}
-            >
-              {displayText}
-              <span className="animate-pulse">|</span>
-            </span>
+            {name}
           </h1>
           <motion.p 
             initial={{ opacity: 0 }}
