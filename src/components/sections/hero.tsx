@@ -187,7 +187,7 @@ export function Hero() {
             initial={{ opacity: 0, x: 30, rotate: 0 }}
             animate={{ opacity: 1, x: 0, rotate: 3 }}
             transition={{ duration: 0.8, delay: 1, ease: "easeOut" }}
-            className="flex justify-center md:justify-end md:-mt-32"
+            className="flex justify-center md:justify-end md:-mt-32 md:translate-x-4"
           >
             <div className="relative rotate-3 bg-white p-4 pb-8 shadow-xl">
               <div className="w-56 h-64 overflow-hidden">
@@ -235,6 +235,7 @@ export function Hero() {
                   animate={{ opacity: 1, y: 0, rotate: 0 }}
                   transition={{ duration: 0.7, delay: 1.3 + delays[idx], ease: "easeOut" }}
                   className="relative bg-white p-4 shadow-lg hover:shadow-2xl transition-all duration-300 group cursor-default border-t border-l border-white/50"
+                  title={metric.tooltip}
                 >
                   {/* Corner stamp effect */}
                   <div className="absolute top-2 right-2 w-2 h-2 border-t-2 border-r-2 border-zinc-900/5 group-hover:border-zinc-900/20 transition-colors duration-300" />
@@ -290,6 +291,7 @@ export function Hero() {
                     scale: 1.05,
                     transition: { duration: 0.3 }
                   }}
+                  title={metric.tooltip}
                 >
                   {/* Corner stamp effect */}
                   <div className="absolute top-2 right-2 w-3 h-3 border-t-2 border-r-2 border-zinc-900/5 group-hover:border-zinc-900/20 transition-colors duration-300" />

@@ -226,6 +226,26 @@ export function Positions() {
           );
         })}
       </div>
+
+      {/* View More Experiences Link */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+        viewport={{ once: true }}
+        className="mt-12 text-center"
+      >
+        <a
+          href={PORTFOLIO_DATA.hero.socials.linkedin}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 text-zinc-600 hover:text-zinc-900 transition-colors text-sm font-medium"
+          aria-label="View more experiences on LinkedIn"
+        >
+          View More Experiences
+          <ExternalLink className="w-4 h-4" />
+        </a>
+      </motion.div>
     </section>
   );
 }

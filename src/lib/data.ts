@@ -11,16 +11,16 @@ export const PORTFOLIO_DATA = {
     portrait: "/portrait.jpg", // Add your portrait image to /public/portrait.jpg
     socials: {
       github: "https://github.com/darrancebeh",
-      linkedin: "https://linkedin.com/in/darrance-beh",
+      linkedin: "https://linkedin.com/in/darrancebeh",
       email: "darrancebeh@gmail.com"
     },
-    role: "US Market Quant & CS Student",
-    bio: "Active trader combining discretionary analysis with systematic execution. Founder of Prism Lake. I analyze markets daily, build quantitative models, and code my own infrastructure. Interested in systematic trading and quantitative research roles.",
-    sub_bio: "Computer Science Major | Active Trading at Prism Lake | Diversifying Analytics Experience at L'Oréal",
+    role: "US Market Quant Researcher & Trader",
+    bio: "Being an active US market trader, I specialize in US Equities & Options, combining systematic modeling with discretionary execution to capture alpha from momentum and catalyst-derived inefficiencies. I analyze the markets daily and publish proprietary research on Prism Lake. Seeking Quantitative Research and Trading roles.",
+    sub_bio: "Computer Science Major | Prism Lake Founder | L'Oréal Data Intern",
     metrics: [
       { label: "Education", value: "Computer Science" },
-      { label: "Trading Exp", value: "5 Years" },
-      { label: "Track Record", value: "600 → 6-Figs", trend: "up" },
+      { label: "In the Market Experience", value: "5 Years" },
+      { label: "Track Record (Last 5 Years)", value: "RM600 → 6-Figs", trend: "up" },
       { label: "Strategy", value: "Momentum/Catalyst" }
     ]
   },
@@ -38,7 +38,7 @@ export const PORTFOLIO_DATA = {
         entry: "2025",
         exit: "Present",
         progress: 50,
-        strategy: "Quantative & Discretionary Market Research", 
+        strategy: "Quantitative & Discretionary Market Research", 
         badges: [
           { text: "Active", icon: "activity", color: "green" }
         ],
@@ -228,7 +228,7 @@ export const PORTFOLIO_DATA = {
     bio: "Active trader at Prism Lake, seeking roles in quantitative research, trading, data science, and related fields. Open to summer 2026 and full-time 2027 opportunities.",
     email: "darrancebeh@gmail.com",
     github: "https://github.com/darrancebeh",
-    linkedin: "https://linkedin.com/in/darrance-beh",
+    linkedin: "https://linkedin.com/in/darrancebeh",
     cta: "Discuss Opportunities"
   },
 
