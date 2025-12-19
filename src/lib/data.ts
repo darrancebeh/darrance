@@ -21,7 +21,7 @@ export const PORTFOLIO_DATA = {
       { label: "Education", value: "Computer Science" },
       { label: "Trading Exp", value: "5 Years" },
       { label: "Track Record", value: "600 → 6-Figs", trend: "up" },
-      { label: "Strategy", value: "Momentum/Macro" }
+      { label: "Strategy", value: "Momentum/Catalyst" }
     ]
   },
   

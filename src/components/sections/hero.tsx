@@ -165,28 +165,110 @@ export function Hero() {
           </motion.div>
         </div>
 
-        {/* The "Performance Matrix" (Stats) */}
+        {/* The "Performance Matrix" - Scattered Cards */}
         <motion.div 
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.2 }}
-          className="glass-panel p-6 md:p-8 rounded-2xl"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 1.2 }}
+          className="relative"
         >
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-y-8 gap-x-4">
-            
-            {metrics.map((metric, idx) => (
-              <div key={idx} className="flex flex-col">
-                <span className="text-[10px] font-mono uppercase tracking-widest text-zinc-400 mb-1">
-                  {metric.label}
-                </span>
-                <span className="font-mono text-lg text-zinc-900">
-                  {metric.value}
-                  {metric.trend === "up" && (
-                    <TrendingUp className="inline-block ml-1 w-4 h-4 text-momentum-green" />
-                  )}
-                </span>
-              </div>
-            ))}
+          {/* Mobile: Grid Layout */}
+          <div className="grid grid-cols-2 gap-4 md:hidden">
+            {metrics.map((metric, idx) => {
+              const delays = [0, 0.15, 0.3, 0.45];
+              
+              return (
+                <motion.div 
+                  key={idx}
+                  initial={{ opacity: 0, y: 30, rotate: 0 }}
+                  animate={{ opacity: 1, y: 0, rotate: 0 }}
+                  transition={{ duration: 0.7, delay: 1.3 + delays[idx], ease: "easeOut" }}
+                  className="relative bg-white p-4 shadow-lg hover:shadow-2xl transition-all duration-300 group cursor-default border-t border-l border-white/50"
+                >
+                  {/* Corner stamp effect */}
+                  <div className="absolute top-2 right-2 w-2 h-2 border-t-2 border-r-2 border-zinc-900/5 group-hover:border-zinc-900/20 transition-colors duration-300" />
+                  <div className="absolute bottom-2 left-2 w-2 h-2 border-b-2 border-l-2 border-zinc-900/5 group-hover:border-zinc-900/20 transition-colors duration-300" />
+                  
+                  <div className="relative flex flex-col items-center gap-2 min-h-[80px] justify-center">
+                    <div className="flex items-baseline gap-1 justify-center flex-wrap">
+                      <span className="font-mono text-sm font-bold text-zinc-900 tracking-tighter text-center leading-tight break-words max-w-full px-2">
+                        {metric.value}
+                      </span>
+                      {metric.trend === "up" && (
+                        <TrendingUp className="w-3 h-3 text-zinc-900 opacity-30 flex-shrink-0" />
+                      )}
+                    </div>
+                    <div className="w-8 h-px bg-zinc-900/10" />
+                    <span className="text-[8px] font-mono uppercase tracking-[0.15em] text-zinc-500 text-center leading-tight px-1">
+                      {metric.label}
+                    </span>
+                  </div>
+
+                  {/* Index marker */}
+                  <div className="absolute top-1.5 left-1.5 text-[7px] font-mono text-zinc-900/5">
+                    {String(idx + 1).padStart(2, '0')}
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
+
+          {/* Desktop: Scattered Overlap Layout */}
+          <div className="hidden md:block relative min-h-[180px]">
+            {metrics.map((metric, idx) => {
+              const rotations = ['-rotate-2', 'rotate-3', '-rotate-3', 'rotate-2'];
+              const positions = [
+                'left-[2%] top-8',
+                'left-[20%] top-0',
+                'left-[42%] top-10',
+                'left-[62%] top-4'
+              ];
+              const delays = [0, 0.15, 0.3, 0.45];
+              const zIndexes = ['z-10', 'z-20', 'z-30', 'z-40'];
+              
+              return (
+                <motion.div 
+                  key={idx}
+                  initial={{ opacity: 0, y: 30, rotate: 0 }}
+                  animate={{ opacity: 1, y: 0, rotate: idx % 2 === 0 ? -2 : 3 }}
+                  transition={{ duration: 0.7, delay: 1.3 + delays[idx], ease: "easeOut" }}
+                  className={`absolute bg-white p-6 shadow-lg hover:shadow-2xl transition-all duration-300 group cursor-default border-t border-l border-white/50 ${rotations[idx]} ${positions[idx]} ${zIndexes[idx]} hover:!z-50`}
+                  whileHover={{ 
+                    y: -10, 
+                    rotate: 0,
+                    scale: 1.05,
+                    transition: { duration: 0.3 }
+                  }}
+                >
+                  {/* Corner stamp effect */}
+                  <div className="absolute top-2 right-2 w-3 h-3 border-t-2 border-r-2 border-zinc-900/5 group-hover:border-zinc-900/20 transition-colors duration-300" />
+                  <div className="absolute bottom-2 left-2 w-3 h-3 border-b-2 border-l-2 border-zinc-900/5 group-hover:border-zinc-900/20 transition-colors duration-300" />
+                  
+                  {/* Subtle grain texture */}
+                  <div className="absolute inset-0 opacity-[0.015] bg-[radial-gradient(circle_at_50%_50%,rgba(0,0,0,0.1),transparent_50%)] pointer-events-none" />
+                  
+                  <div className="relative flex flex-col items-center gap-2.5 min-w-[150px]">
+                    <div className="flex items-baseline gap-1.5">
+                      <span className="font-mono text-3xl font-bold text-zinc-900 tracking-tight">
+                        {metric.value}
+                      </span>
+                      {metric.trend === "up" && (
+                        <TrendingUp className="w-4 h-4 text-zinc-900 opacity-30 group-hover:opacity-60 transition-opacity duration-300" />
+                      )}
+                    </div>
+                    <div className="w-10 h-px bg-zinc-900/10 group-hover:w-full group-hover:bg-zinc-900/30 transition-all duration-500" />
+                    <span className="text-[9px] font-mono uppercase tracking-[0.2em] text-zinc-500 text-center leading-tight">
+                      {metric.label}
+                    </span>
+                  </div>
+
+                  {/* Index marker */}
+                  <div className="absolute top-2 left-2 text-[8px] font-mono text-zinc-900/5 group-hover:text-zinc-900/20 transition-colors duration-300">
+                    {String(idx + 1).padStart(2, '0')}
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
         </motion.div>
 
