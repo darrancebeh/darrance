@@ -137,7 +137,7 @@ export function Positions() {
               </div>
 
               {/* Thesis */}
-              <p className={`${isHighlighted ? "text-sm md:text-base" : "text-sm"} text-zinc-600 leading-relaxed mb-4`}>
+              <p className={`${isHighlighted ? "text-sm md:text-base" : "text-sm md:text-base"} text-zinc-600 leading-relaxed mb-4`}>
                 {thesis}
               </p>
 
@@ -172,7 +172,7 @@ export function Positions() {
               {/* ROI Section */}
               <div className="space-y-2">
                 {/* First ROI bullet - always visible */}
-                <div className="flex gap-2.5 text-sm text-zinc-700 leading-relaxed">
+                <div className="flex gap-2.5 text-sm md:text-base text-zinc-700 leading-relaxed">
                   <span className="text-momentum-green mt-0.5 flex-shrink-0">→</span>
                   <span className="font-mono">{roi[0]}</span>
                 </div>
@@ -190,7 +190,7 @@ export function Positions() {
                       {roi.slice(1).map((item, idx) => (
                         <motion.div 
                           key={idx} 
-                          className="flex gap-2.5 text-sm text-zinc-700 leading-relaxed"
+                          className="flex gap-2.5 text-sm md:text-base text-zinc-700 leading-relaxed"
                           initial={{ opacity: 0, y: 10 }}
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ delay: idx * 0.1, duration: 0.3 }}

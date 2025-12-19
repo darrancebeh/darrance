@@ -167,14 +167,14 @@ export function Hero() {
         </div>
 
         {/* The "Thesis" (Bio) */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-12">
           <motion.div 
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
             className="md:col-span-2"
           >
-            <p className="text-lg text-zinc-700 leading-relaxed text-balance mb-4">
+            <p className="text-base md:text-lg text-zinc-700 leading-relaxed text-balance mb-4">
               {bio}
             </p>
             <p className="text-sm font-mono text-zinc-500">
