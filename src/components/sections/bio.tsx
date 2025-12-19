@@ -53,7 +53,7 @@ export function Bio() {
               whileInView={{ opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.5 }}
               viewport={{ once: true }}
-              className="text-lg md:text-base text-zinc-800 leading-loose mb-4"
+              className="text-lg md:text-base text-zinc-800 leading-loose mb-4 text-justify"
             >
             I have a distinct inability to do things &apos;casually.&apos; <br/> <br/>
 
@@ -73,7 +73,7 @@ export function Bio() {
               whileInView={{ opacity: 1 }}
               transition={{ delay: 0.5, duration: 0.5 }}
               viewport={{ once: true }}
-              className="text-lg md:text-base text-zinc-800 leading-loose mb-4"
+              className="text-lg md:text-base text-zinc-800 leading-loose mb-4 text-justify"
             >
             </motion.p>
 
