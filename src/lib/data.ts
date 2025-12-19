@@ -110,13 +110,13 @@ export const PORTFOLIO_DATA = {
         title: "Prism Lake",
         description: "Malaysia's pioneering quantitative research and proprietary trading firm, specializing in US Equities & Derivatives.",
         link: "https://prismlake.com",
-        tags: ["Python", "Next.js", "Real-time Data", "Systematic Trading"]
+        tags: ["Quantitative Research", "Startup", "Trading", "Market Analysis"]
       },
       {
         title: "Prism Lake Intelligence",
         description: "Prism Lake's proprietary market research publication platform, delivering in-depth market analysis and trading insights on US markets.",
         link: "https://prismlake.com/research",
-        tags: ["Research", "Quantitative Analysis", "Market Insights", "Publications"]
+        tags: ["Market Research", "Publications"]
       },
       {
         title: "The Portfolio",
@@ -127,7 +127,7 @@ export const PORTFOLIO_DATA = {
       {
         title: "University Final Year Project",
         description: "Advanced quantitative analysis tool combining multiple data modalities for financial forecasting and risk assessment.",
-        tags: ["Python", "Machine Learning", "Quantitative Finance", "Research"]
+        tags: ["Quantitative Finance", "Machine Learning", "Research"]
       }
     ]
   },
