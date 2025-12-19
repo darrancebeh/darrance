@@ -21,8 +21,8 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Darrance Beh | Quant Trader & CS Student",
-  description: "Lancaster University CS student and active quant trader. Founder of Prism Lake. Seeking trading and research roles at quantitative firms and investment banks. Track record: RM600 → 6-figures.",
+  title: "darrancebeh | portfolio",
+  description: "Active quant trader and CS major. Founder of Prism Lake. Seeking trading and research roles at quantitative firms and investment banks. Track record: RM600 → 6-figures.",
   keywords: ["Quant Trader", "Quantitative Trading", "Systematic Trading", "Lancaster University", "Prism Lake", "Python", "Trading Infrastructure", "Market Analysis"],
   authors: [{ name: "Darrance Beh" }],
   creator: "Darrance Beh",
@@ -47,6 +47,9 @@ export const metadata: Metadata = {
     title: "Darrance Beh | Quant Trader & CS Student",
     description: "Active quant trader combining discretionary analysis with systematic execution. Founder of Prism Lake.",
     images: ["/portrait.jpg"],
+  },
+  icons: {
+    icon: "/favicon.svg",
   },
   robots: {
     index: true,
