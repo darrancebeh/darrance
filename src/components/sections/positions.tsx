@@ -37,7 +37,7 @@ export function Positions() {
       
       <div className="space-y-6">
         {data.map((position, index) => {
-          const { company, ticker, role, status, entry, exit, strategy, location, thesis, roi, link, quickStat } = position;
+          const { company, ticker, role, status, entry, exit, strategy, location, thesis, roi, link } = position;
           const isExpanded = expandedPositions.has(index);
           const isHighlighted = status === "OPEN" || status === "INCOMING";
 
