@@ -48,6 +48,8 @@ export const PORTFOLIO_DATA = {
           "Built real-time market scanning infrastructure using Python and WebSocket APIs.",
           "Active daily trading: analyzing price action, refining algos, managing risk across global markets."
         ],
+        skills: ["Python", "Quantitative Modeling", "Risk Management"],
+        insights: ["Evolved from discretionary trading to systematic quant strategies"],
         link: "https://prismlake.com"
       },
       {
@@ -67,7 +69,10 @@ export const PORTFOLIO_DATA = {
           "Market Basket Analysis: Developing recommendation algorithms based on pattern recognition in purchase behavior (analogous to factor discovery in quant finance).",
           "ETL & Data Pipeline Management: Ensuring data quality and automation—critical skills for any quantitative research infrastructure.",
           "Enterprise Experience: Understanding how large organizations leverage data for decision-making while maintaining active trading operation."
-        ]
+        ],
+        skills: ["Data Analysis", "ETL Pipelines", "Predictive Modeling"],
+        insights: ["Selected from 1000+ applicants for top-tier data analytics role"],
+        link: "https://www.loreal.com/en/our-global-brands-portfolio/"
       },
       {
         company: "Independent Trading",
@@ -86,7 +91,9 @@ export const PORTFOLIO_DATA = {
           "Scaled RM600 → 6-figures (MYR) through disciplined risk management and catalyst-driven entries.",
           "Built 'Catalyst Engine': Python tool for news sentiment analysis across 10K+ sources daily.",
           "Maintained Sharpe Ratio > 1.5 across multiple market regimes and volatility cycles."
-        ]
+        ],
+        skills: ["Discretionary Trading", "Sentiment Analysis", "Python Automation"],
+        insights: ["Built foundation for Prism Lake through consistent alpha generation"]
       }
     ]
   },
@@ -196,11 +203,19 @@ export const PORTFOLIO_DATA = {
     title: "Trading Philosophy",
     icon: BookOpen,
     researchLink: "https://prismlake.com/research",
+    blogStats: {
+      articlesCount: 12,
+      latestUpdate: "December 2024"
+    },
     featuredArticle: {
       title: "The Structural Decoupling of Price and Value",
       subtitle: "The structural transition from value-driven markets to an ecosystem dominated by inelastic flows and algorithmic liquidity.",
+      excerpt: "In modern markets, price discovery has decoupled from fundamental value. Algorithmic liquidity and inelastic flows now dominate, creating opportunities for systematic traders who understand this structural shift.",
       link: "https://www.prismlake.com/research/the-structural-decoupling-of-price-and-value",
-      label: "Genesis Paper"
+      label: "Genesis Paper",
+      readTime: "8 min read",
+      isNew: true,
+      publishedDate: "December 2024"
     },
     content: [
       {
