@@ -14,7 +14,7 @@ export const PORTFOLIO_DATA = {
       linkedin: "https://linkedin.com/in/darrance-beh",
       email: "darrancebeh@gmail.com"
     },
-    role: "Quant Trader & CS Student",
+    role: "US Market Quant & CS Student",
     bio: "Active trader combining discretionary analysis with systematic execution. Founder of Prism Lake. I analyze markets daily, build quantitative models, and code my own infrastructure. Interested in systematic trading and quantitative research roles.",
     sub_bio: "Computer Science Major | Active Trading at Prism Lake | Diversifying Analytics Experience at L'Oréal",
     metrics: [
@@ -32,24 +32,26 @@ export const PORTFOLIO_DATA = {
     data: [
       {
         company: "Prism Lake",
-        ticker: "PRISM",
+        ticker: "P&L",
         role: "Founder & Quant Researcher",
         status: "OPEN",
-        entry: "2023",
-        exit: "PRESENT",
+        entry: "2025",
+        exit: "Present",
         progress: 50,
-        strategy: "Systematic + Discretionary", 
+        strategy: "Quantative & Discretionary Market Research", 
         badges: [
           { text: "Active", icon: "activity", color: "green" }
         ],
-        thesis: "Personal quantitative trading operation focused on generating alpha. Building proprietary models and trading infrastructure. Daily market analysis, strategy backtesting, and systematic execution across momentum and macro strategies. Visit prismlake.com for more.",
+        thesis: "Founded Malaysia's pioneering quantitative research and proprietary trading firm, specializing in US Equities & Derivatives, with over $30K USD in notional capital deployed across systematic and discretionary strategies.",
         roi: [
+          "Active daily trading involving analyzing price action, refining algos, and managing risk across global markets.",
+          "Developed pricing strategies to evaluate sentiment, catalyst and global macro-driven opportunities in US equities and options.",
           "Developed multi-factor momentum models with backtested Sharpe > 1.8.",
-          "Built real-time market scanning infrastructure using Python and WebSocket APIs.",
-          "Active daily trading: analyzing price action, refining algos, managing risk across global markets."
+          "Built real-time market scanning infrastructure using Python and WebSocket APIs through Interactive Brokers.",
+          "Actively publish technical market research and articles on quantitative trading strategies, market analysis, and proprietary insights through Prism Lake Intelligence.",
         ],
-        skills: ["Python", "Quantitative Modeling", "Risk Management"],
-        insights: ["Evolved from discretionary trading to systematic quant strategies"],
+        skills: ["Startup", "Python", "Quantitative Research", "Risk Management", "Market Analysis", "Equities & Derivatives"],
+        insights: ["Built Prism Lake with the goal to build a localized firm operating with the sophistication of a global hedge fund, and to be at the forefront of quantitative research across global markets. Based in Malaysia."],
         link: "https://prismlake.com"
       },
       {
@@ -64,87 +66,69 @@ export const PORTFOLIO_DATA = {
         badges: [
           { text: "Top 0.2%", icon: "trophy", color: "amber" }
         ],
-        thesis: "Selected from 1000+ applicants (2 positions) to apply systematic analytical thinking to consumer data patterns at the world's leading beauty company. Market Basket Analysis uses similar pattern recognition techniques as financial factor research—identifying correlations, building predictive models, and optimizing recommendations.",
+        thesis: "Selected from 1000+ applicants nationwide (2 positions) to apply systematic analytical thinking to consumer data patterns at the world's leading beauty company by market dominance.",
         roi: [
           "Market Basket Analysis: Developing recommendation algorithms based on pattern recognition in purchase behavior (analogous to factor discovery in quant finance).",
-          "ETL & Data Pipeline Management: Ensuring data quality and automation—critical skills for any quantitative research infrastructure.",
+          "ETL & Data Pipeline Management: Ensuring data quality and automation—critical skills for quantitative research infrastructure.",
           "Enterprise Experience: Understanding how large organizations leverage data for decision-making while maintaining active trading operation."
         ],
         skills: ["Data Analysis", "ETL Pipelines", "Predictive Modeling"],
-        insights: ["Selected from 1000+ applicants for top-tier data analytics role"],
+        insights: ["Selected from 1000+ applicants after 5 interview rounds for pioneering data analytics team."],
         link: "https://www.loreal.com/en/our-global-brands-portfolio/"
       },
       {
-        company: "Independent Trading",
+        company: "Independent Trading Desk",
         ticker: "PROP.DESK",
-        role: "Discretionary Trader → Quant",
+        role: "Discretionary Trader",
         status: "EVOLVED",
         entry: "2020",
-        exit: "2023",
+        exit: "Present",
         progress: 100,
-        strategy: "Global Macro / Catalyst",
+        strategy: "Discretionary Momentum Trading",
         badges: [
           { text: "5Y Track Record", icon: "calendar", color: "gray" }
         ],
-        thesis: "Started with RM600 seed capital. Traded volatility during major market catalysts (COVID, inflation, rate cycles). Evolved from discretionary execution to Python-based systematic strategies, leading to Prism Lake.",
+        thesis: "Started with RM600 seed capital. Traded momentum and volatility market microstructure during major market catalysts (COVID, inflation, rate cycles). Evolved from discretionary analysis to Python-based systematic strategies, leading to Prism Lake.",
         roi: [
           "Scaled RM600 → 6-figures (MYR) through disciplined risk management and catalyst-driven entries.",
-          "Built 'Catalyst Engine': Python tool for news sentiment analysis across 10K+ sources daily.",
+          "Automated trade journaling and performance analysis using Python.",
+          "Developed Python workflows for market analysis, including a sentiment analysis aggregator across 100+ sources daily.",
           "Maintained Sharpe Ratio > 1.5 across multiple market regimes and volatility cycles."
         ],
-        skills: ["Discretionary Trading", "Sentiment Analysis", "Python Automation"],
-        insights: ["Built foundation for Prism Lake through consistent alpha generation"]
+        skills: ["US Equity Analysis", "Discretionary Trading", "Sentiment Analysis", "Momentum Trading","Python Automation"],
+        insights: ["Successfully funding university tuition fees (RM60k) through trading portfolio since 2023."]
       }
     ]
   },
 
   // SECTION: PROJECTS (Breakout Setups)
   breakout: {
-    title: "Breakout Setups (Research & Tools)",
+    title: "Breakouts (Projects)",
     icon: TrendingUp,
     data: [
       {
-        title: "Prism Lake Platform",
-        description: "Quantitative trading research and execution platform. Multi-strategy backtesting, real-time scanning, and systematic trade execution.",
-        momentum: "High", 
+        title: "Prism Lake",
+        description: "Malaysia's pioneering quantitative research and proprietary trading firm, specializing in US Equities & Derivatives.",
         link: "https://prismlake.com",
         tags: ["Python", "Next.js", "Real-time Data", "Systematic Trading"]
       },
       {
         title: "Prism Lake Intelligence",
-        description: "Proprietary research publication platform. Advanced quantitative analysis, market insights, and trading research shared with the community.",
-        momentum: "High", 
+        description: "Prism Lake's proprietary market research publication platform, delivering in-depth market analysis and trading insights on US markets.",
         link: "https://prismlake.com/research",
         tags: ["Research", "Quantitative Analysis", "Market Insights", "Publications"]
       },
       {
         title: "Portfolio.v4",
-        description: "This site. A statement on precision design and systematic thinking applied to web architecture.",
-        momentum: "Stable",
+        description: "This website. My fourth iteration on my personal portfolio.",
         link: "https://github.com/darrancebeh/darrance",
         tags: ["Next.js", "Tailwind v4", "OKLCH"]
       },
       {
-        title: "Multi-Modal Quantitative Financial Analysis Tool",
-        description: "Final year research project: Advanced quantitative analysis tool combining multiple data modalities for financial forecasting and risk assessment.",
-        momentum: "Completed",
-        link: "https://github.com/darrancebeh/multi-modal-quant", // Assuming a link, or remove if no link
+        title: "University Final Year Project",
+        description: "Advanced quantitative analysis tool combining multiple data modalities for financial forecasting and risk assessment.",
         tags: ["Python", "Machine Learning", "Quantitative Finance", "Research"]
       }
-    ]
-  },
-
-  // SECTION: SKILLS (Asset Allocation)
-  alpha: {
-    title: "Tech Stack Allocation",
-    icon: BarChart4,
-    // We treat skills as "Holdings" with percentages
-    data: [
-      { asset: "Python (Pandas/NumPy/SciPy)", weight: "40%", sentiment: "Bullish", type: "Core Quant Stack" },
-      { asset: "Market Data APIs (Real-time)", weight: "25%", sentiment: "Bullish", type: "Infrastructure" },
-      { asset: "TypeScript / Next.js", weight: "20%", sentiment: "Long", type: "Dashboard/UI" },
-      { asset: "SQL / Time-Series DBs", weight: "10%", sentiment: "Long", type: "Data Storage" },
-      { asset: "Rust / Low-Latency Systems", weight: "5%", sentiment: "Speculative", type: "R&D" }
     ]
   },
 
@@ -181,7 +165,7 @@ export const PORTFOLIO_DATA = {
     categories: [
       {
         name: "Quantitative",
-        tools: ["Python", "Pandas", "NumPy", "TA-Lib", "Backtrader"]
+        tools: ["Python", "Pandas", "NumPy", ".ipynb", "Backtrader"]
       },
       {
         name: "Data & APIs",
@@ -193,7 +177,7 @@ export const PORTFOLIO_DATA = {
       },
       {
         name: "Infrastructure",
-        tools: ["Git", "Docker", "Linux", "Cloud Deployment"]
+        tools: ["Git", "Docker", "Linux", "Cloud Deployment", "AWS/GCP"]
       }
     ]
   },
@@ -213,7 +197,7 @@ export const PORTFOLIO_DATA = {
       excerpt: "In modern markets, price discovery has decoupled from fundamental value. Algorithmic liquidity and inelastic flows now dominate, creating opportunities for systematic traders who understand this structural shift.",
       link: "https://www.prismlake.com/research/the-structural-decoupling-of-price-and-value",
       label: "Genesis Paper",
-      readTime: "8 min read",
+      readTime: "10-15 min read",
       isNew: true,
       publishedDate: "December 2024"
     },
@@ -240,8 +224,8 @@ export const PORTFOLIO_DATA = {
   liquidity: {
     title: "Liquidity & Opportunities",
     icon: Unlock,
-    status: "ACTIVE TRADER | OPEN TO QUANT OPPORTUNITIES",
-    bio: "Active trader at Prism Lake, seeking roles in quant trading, data science, and systematic strategies. Open to summer 2026 and full-time 2027 opportunities.",
+    status: "ACTIVE TRADER & INVESTOR | OPEN TO QUANT / TRADING OPPORTUNITIES",
+    bio: "Active trader at Prism Lake, seeking roles in quantitative research, trading, data science, and related fields. Open to summer 2026 and full-time 2027 opportunities.",
     email: "darrancebeh@gmail.com",
     github: "https://github.com/darrancebeh",
     linkedin: "https://linkedin.com/in/darrance-beh",
