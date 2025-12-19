@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { SectionNav } from "@/components/ui/section-nav";
+import { ScrollProgress } from "@/components/ui/scroll-progress";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,6 +23,35 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: "Darrance Beh | Quant Trader & CS Student",
   description: "Lancaster University CS student and active quant trader. Founder of Prism Lake. Seeking trading and research roles at quantitative firms and investment banks. Track record: RM600 → 6-figures.",
+  keywords: ["Quant Trader", "Quantitative Trading", "Systematic Trading", "Lancaster University", "Prism Lake", "Python", "Trading Infrastructure", "Market Analysis"],
+  authors: [{ name: "Darrance Beh" }],
+  creator: "Darrance Beh",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://darrancebeh.com",
+    title: "Darrance Beh | Quant Trader & CS Student",
+    description: "Active quant trader combining discretionary analysis with systematic execution. Building proprietary models and trading infrastructure at Prism Lake.",
+    siteName: "Darrance Beh Portfolio",
+    images: [
+      {
+        url: "/portrait.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Darrance Beh - Quant Trader",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Darrance Beh | Quant Trader & CS Student",
+    description: "Active quant trader combining discretionary analysis with systematic execution. Founder of Prism Lake.",
+    images: ["/portrait.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
@@ -34,6 +64,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} font-sans tracking-tight relative overflow-x-hidden`}
       >
+        <ScrollProgress />
           {/* --- LAYER 1: Ambient Background Orbs --- */}
           <div className="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
             {/* Top Left - Subtle Green Glow */}

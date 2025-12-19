@@ -16,9 +16,9 @@ export const PORTFOLIO_DATA = {
     },
     role: "Quant Trader & CS Student",
     bio: "Active trader combining discretionary analysis with systematic execution. Founder of Prism Lake. I analyze markets daily, build quantitative models, and code my own infrastructure. Interested in systematic trading and quantitative research roles.",
-    sub_bio: "Lancaster University CS | Active Trading at Prism Lake | Diversifying Analytics Experience at L'Oréal",
+    sub_bio: "Computer Science Major | Active Trading at Prism Lake | Diversifying Analytics Experience at L'Oréal",
     metrics: [
-      { label: "Education", value: "Lancaster Uni" },
+      { label: "Education", value: "Computer Science" },
       { label: "Trading Exp", value: "5 Years" },
       { label: "Track Record", value: "600 → 6-Figs", trend: "up" },
       { label: "Strategy", value: "Momentum/Macro" }
