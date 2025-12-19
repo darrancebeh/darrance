@@ -188,8 +188,8 @@ export const PORTFOLIO_DATA = {
     icon: BookOpen,
     researchLink: "https://prismlake.com/research",
     blogStats: {
-      articlesCount: 12,
-      latestUpdate: "December 2024"
+      articlesCount: 3,
+      latestUpdate: "December 2025"
     },
     featuredArticle: {
       title: "The Structural Decoupling of Price and Value",
@@ -199,7 +199,7 @@ export const PORTFOLIO_DATA = {
       label: "Genesis Paper",
       readTime: "10-15 min read",
       isNew: true,
-      publishedDate: "December 2024"
+      publishedDate: "November 2025"
     },
     content: [
       {
