@@ -119,7 +119,7 @@ export const PORTFOLIO_DATA = {
         tags: ["Research", "Quantitative Analysis", "Market Insights", "Publications"]
       },
       {
-        title: "Portfolio.v4",
+        title: "The Portfolio",
         description: "This website. My fourth iteration on my personal portfolio.",
         link: "https://github.com/darrancebeh/darrance",
         tags: ["Next.js", "Tailwind v4", "OKLCH"]

@@ -20,7 +20,7 @@ export function Breakout() {
   const projectIcons = {
     "Prism Lake Platform": TrendingUp,
     "Prism Lake Intelligence": BookOpen,
-    "Portfolio.v4": Monitor,
+    "The Portfolio": Monitor,
     "Multi-Modal Quantitative Financial Analysis Tool": Cpu,
   };
 
