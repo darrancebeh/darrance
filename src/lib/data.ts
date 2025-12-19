@@ -111,18 +111,11 @@ export const PORTFOLIO_DATA = {
         tags: ["Python", "Next.js", "Real-time Data", "Systematic Trading"]
       },
       {
-        title: "Catalyst Engine",
-        description: "Real-time news aggregation and sentiment analysis system. Processes 10K+ sources daily to identify market-moving catalysts.",
+        title: "Prism Lake Intelligence",
+        description: "Proprietary research publication platform. Advanced quantitative analysis, market insights, and trading research shared with the community.",
         momentum: "High", 
-        link: "https://github.com/darrancebeh",
-        tags: ["Python", "NLP", "WebSocket", "Pandas"]
-      },
-      {
-        title: "QuantBoard",
-        description: "Live dashboard for order flow analysis and momentum scoring across crypto and equity markets.",
-        momentum: "High", 
-        link: "https://github.com/darrancebeh",
-        tags: ["Next.js", "Recharts", "Real-time Data"]
+        link: "https://prismlake.com/research",
+        tags: ["Research", "Quantitative Analysis", "Market Insights", "Publications"]
       },
       {
         title: "Portfolio.v4",
@@ -130,6 +123,13 @@ export const PORTFOLIO_DATA = {
         momentum: "Stable",
         link: "https://github.com/darrancebeh/darrance",
         tags: ["Next.js", "Tailwind v4", "OKLCH"]
+      },
+      {
+        title: "Multi-Modal Quantitative Financial Analysis Tool",
+        description: "Final year research project: Advanced quantitative analysis tool combining multiple data modalities for financial forecasting and risk assessment.",
+        momentum: "Completed",
+        link: "https://github.com/darrancebeh/multi-modal-quant", // Assuming a link, or remove if no link
+        tags: ["Python", "Machine Learning", "Quantitative Finance", "Research"]
       }
     ]
   },

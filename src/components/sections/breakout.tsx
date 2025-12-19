@@ -1,57 +1,163 @@
 "use client";
 
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, TrendingUp, BookOpen, Monitor, Cpu, X, ChevronLeft, ChevronRight } from "lucide-react";
 import { PORTFOLIO_DATA } from "@/lib/data";
 import { SectionHeader } from "@/components/ui/section-header";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence, PanInfo } from "framer-motion";
+import { useState } from "react";
 
 export function Breakout() {
   const { title, icon, data } = PORTFOLIO_DATA.breakout;
+  const [selectedProject, setSelectedProject] = useState<typeof data[0] | null>(null);
+  const [currentTopIndex, setCurrentTopIndex] = useState(0);
+  const stackOrder = [
+    currentTopIndex,
+    (currentTopIndex + 1) % data.length,
+    (currentTopIndex + 2) % data.length,
+    (currentTopIndex + 3) % data.length,
+  ];
+
+  const projectIcons = {
+    "Prism Lake Platform": TrendingUp,
+    "Prism Lake Intelligence": BookOpen,
+    "Portfolio.v4": Monitor,
+    "Multi-Modal Quantitative Financial Analysis Tool": Cpu,
+  };
 
   return (
     <section id="breakout" className="mb-24 relative">
-      {/* Glass Accent */}
-      <div className="absolute top-[30%] right-[-5%] w-56 h-56 bg-gradient-to-bl from-white/15 to-cream-100/10 backdrop-blur-3xl rounded-full -z-10" />
-      
       <SectionHeader title={title} icon={icon} />
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {data.map((project, i) => (
-          <motion.a
-            key={i}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.5, delay: i * 0.1 }}
-            href={project.link}
-            // UPDATED: Using the new glass-card utility
-            className="group glass-card hover-lift p-6 rounded-xl relative overflow-hidden"
-          >
-            {/* Subtle Gradient overlay on hover for that "Liquid" feel */}
-            <div className="absolute inset-0 bg-gradient-to-br from-white/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-            <div className="relative z-10">
-              <div className="flex justify-between items-start mb-4">
-                <div className={`w-2 h-2 rounded-full ${project.momentum === 'High' ? 'bg-momentum-green shadow-[0_0_12px_var(--color-momentum-green)]' : 'bg-zinc-300'}`}></div>
-                <ArrowUpRight className="w-4 h-4 text-zinc-400 group-hover:text-zinc-900 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+      {/* 3D Card Stack */}
+      <div className="flex flex-col items-center">
+        <div className="flex items-center justify-center space-x-8 h-96" style={{ perspective: '1000px' }}>
+          {/* Left Arrow */}
+          <button
+            onClick={() => setCurrentTopIndex((prev) => (prev - 1 + data.length) % data.length)}
+            className="p-2 rounded-full bg-white/80 backdrop-blur-sm border border-zinc-200 hover:bg-white transition-colors flex-shrink-0"
+          >
+            <ChevronLeft className="w-5 h-5 text-zinc-600" />
+          </button>
+
+          <motion.div
+            className="relative w-80 h-80 cursor-default flex-shrink-0"
+          >
+            {stackOrder.slice(0, 3).map((index, i) => {
+              const project = data[index];
+              const IconComponent = projectIcons[project.title as keyof typeof projectIcons];
+
+              return (
+                <motion.div
+                  key={index}
+                  className="absolute inset-0 p-6 rounded-2xl border shadow-lg bg-white/90 backdrop-blur-sm text-zinc-900 border-zinc-200 transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer"
+                  style={{
+                    zIndex: 10 - i,
+                    transform: `translateY(${i * 20}px) translateX(${i * 10}px) rotate(${i * 3}deg)`,
+                    transformStyle: 'preserve-3d',
+                  }}
+                  whileHover={i === 0 ? { y: -15 } : {}}
+                  onClick={i === 0 ? () => setSelectedProject(project) : undefined}
+                >
+                  <div className="flex flex-col items-center justify-center h-full text-center">
+                    {IconComponent && <IconComponent className="w-8 h-8 mb-3 text-zinc-600" />}
+                    <h3 className="font-semibold text-lg mb-2">{project.title}</h3>
+                    <p className="text-sm leading-relaxed text-zinc-600">
+                      {project.description}
+                    </p>
+                    <div className="flex flex-wrap gap-2 mt-4 justify-center">
+                      {project.tags.slice(0, 2).map(tag => (
+                        <span key={tag} className="text-xs px-2 py-1 rounded-full bg-zinc-100 text-zinc-700 border border-zinc-200">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </motion.div>
+
+          {/* Right Arrow */}
+          <button
+            onClick={() => setCurrentTopIndex((prev) => (prev + 1) % data.length)}
+            className="p-2 rounded-full bg-white/80 backdrop-blur-sm border border-zinc-200 hover:bg-white transition-colors flex-shrink-0"
+          >
+            <ChevronRight className="w-5 h-5 text-zinc-600" />
+          </button>
+        </div>
+
+        {/* Page Indicators */}
+        <div className="flex space-x-2 mt-4">
+          {data.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setCurrentTopIndex(i)}
+              className={`w-3 h-3 rounded-full transition-colors ${
+                currentTopIndex === i ? 'bg-zinc-900' : 'bg-zinc-300'
+              }`}
+            />
+          ))}
+        </div>
+      </div>
+
+      {/* Modal */}
+      <AnimatePresence>
+        {selectedProject && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4"
+            onClick={() => setSelectedProject(null)}
+          >
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+              className="relative max-w-md w-full p-6 rounded-2xl border bg-white/90 backdrop-blur-sm text-zinc-900 border-zinc-200"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                onClick={() => setSelectedProject(null)}
+                className="absolute top-4 right-4 p-1 rounded-full hover:bg-zinc-100"
+              >
+                <X className="w-5 h-5" />
+              </button>
+
+              <div className="flex items-center gap-3 mb-4">
+                {(() => {
+                  const IconComponent = projectIcons[selectedProject.title as keyof typeof projectIcons];
+                  return IconComponent ? <IconComponent className="w-6 h-6 text-zinc-600" /> : null;
+                })()}
+                <h3 className="font-semibold text-lg">{selectedProject.title}</h3>
               </div>
-              
-              <h3 className="font-medium text-zinc-900 mb-2 text-lg tracking-tight">{project.title}</h3>
-              <p className="text-sm text-zinc-500 mb-6 h-10 line-clamp-2 leading-relaxed">
-                {project.description}
+
+              <p className="text-sm leading-relaxed mb-4 text-zinc-600">
+                {selectedProject.description}
               </p>
-              
-              <div className="flex flex-wrap gap-2 mt-auto">
-                {project.tags.map(tag => (
-                  <span key={tag} className="text-[10px] font-mono text-zinc-500 bg-white/50 px-2 py-1 rounded-md border border-white/60">
+
+              <div className="flex flex-wrap gap-2 mb-4">
+                {selectedProject.tags.map(tag => (
+                  <span key={tag} className="text-xs px-3 py-1 rounded-full bg-zinc-100 text-zinc-700 border border-zinc-200">
                     {tag}
                   </span>
                 ))}
               </div>
-            </div>
-          </motion.a>
-        ))}
-      </div>
+
+              {selectedProject.link && (
+                <a
+                  href={selectedProject.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm font-medium text-zinc-600 hover:text-zinc-900"
+                >
+                  View Project <ArrowUpRight className="w-4 h-4" />
+                </a>
+              )}
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }
