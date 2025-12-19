@@ -38,7 +38,8 @@ export const PORTFOLIO_DATA = {
         entry: "2025",
         exit: "Present",
         progress: 50,
-        strategy: "Quantitative & Discretionary Market Research", 
+        strategy: "Startup",
+        location: "Remote, Malaysia", 
         badges: [
           { text: "Active", icon: "activity", color: "green" }
         ],
@@ -63,17 +64,18 @@ export const PORTFOLIO_DATA = {
         exit: "Apr 2026",
         progress: 0,
         strategy: "Quantitative Analytics",
+        location: "Kuala Lumpur, Malaysia",
         badges: [
           { text: "Top 0.2%", icon: "trophy", color: "amber" }
         ],
-        thesis: "Selected from 1000+ applicants nationwide (2 positions) to apply systematic analytical thinking to consumer data patterns at the world's leading beauty company by market dominance.",
+        thesis: "Selected from over 1,000 applicants nationwide (top 0.2%) to join the pioneering data analytics team at the world's leading beauty company by market dominance.",
         roi: [
-          "Market Basket Analysis: Developing recommendation algorithms based on pattern recognition in purchase behavior (analogous to factor discovery in quant finance).",
-          "ETL & Data Pipeline Management: Ensuring data quality and automation—critical skills for quantitative research infrastructure.",
-          "Enterprise Experience: Understanding how large organizations leverage data for decision-making while maintaining active trading operation."
+          "Market Basket Analysis: Tasked with developing smart product recommendation algorithms based on pattern recognition in purchase behavior to identify latent factors and non-obvious correlations and optimize for promotional efficiency.",
+          "ETL & Data Pipeline Management: Responsible for the end-to-end ETL architecture and data integrity, ensuring raw datasets are sanitized and structured for high-level reporting.",
+          "Change Management: Driving the adoption of business intelligence tools by translating technical data into actionable insights, conducting user training, and managing stakeholder feedback loops to refine data strategies."
         ],
         skills: ["Data Analysis", "ETL Pipelines", "Predictive Modeling"],
-        insights: ["Selected from 1000+ applicants after 5 interview rounds for pioneering data analytics team."],
+        insights: ["Emerged as a top candidate after a competitive 5-stage technical and behavioral assessment."],
         link: "https://www.loreal.com/en/our-global-brands-portfolio/"
       },
       {
@@ -84,7 +86,8 @@ export const PORTFOLIO_DATA = {
         entry: "2020",
         exit: "Present",
         progress: 100,
-        strategy: "Discretionary Momentum Trading",
+        strategy: "Discretionary Trading",
+        location: "Remote, Malaysia",
         badges: [
           { text: "5Y Track Record", icon: "calendar", color: "gray" }
         ],
