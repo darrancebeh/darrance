@@ -1,4 +1,6 @@
 import { Hero } from "@/components/sections/hero";
+import { Bio } from "@/components/sections/bio";
+import { Quotes } from "@/components/sections/quotes";
 import { Positions } from "@/components/sections/positions";
 import { Breakout } from "@/components/sections/breakout";
 import { Alpha } from "@/components/sections/alpha";
@@ -11,6 +13,8 @@ export default function Portfolio() {
   return (
     <div className="min-h-screen">
       <Hero />
+      <Bio />
+      <Quotes />
       <Positions />
       <Thesis />
       <Breakout />

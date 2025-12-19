@@ -34,13 +34,22 @@ export function Breakout() {
           {/* Left Arrow */}
           <button
             onClick={() => setCurrentTopIndex((prev) => (prev - 1 + data.length) % data.length)}
-            className="p-2 rounded-full bg-white/80 backdrop-blur-sm border border-zinc-200 hover:bg-white transition-colors flex-shrink-0"
+            className="hidden md:flex p-2 rounded-full bg-white/80 backdrop-blur-sm border border-zinc-200 hover:bg-white transition-colors flex-shrink-0"
           >
             <ChevronLeft className="w-5 h-5 text-zinc-600" />
           </button>
 
           <motion.div
             className="relative w-80 h-80 cursor-default flex-shrink-0"
+            drag="x"
+            dragConstraints={{ left: 0, right: 0 }}
+            onDragEnd={(event, info: PanInfo) => {
+              if (info.offset.x > 50) {
+                setCurrentTopIndex((prev) => (prev + 1) % data.length);
+              } else if (info.offset.x < -50) {
+                setCurrentTopIndex((prev) => (prev - 1 + data.length) % data.length);
+              }
+            }}
           >
             {stackOrder.slice(0, 3).map((index, i) => {
               const project = data[index];
@@ -80,7 +89,7 @@ export function Breakout() {
           {/* Right Arrow */}
           <button
             onClick={() => setCurrentTopIndex((prev) => (prev + 1) % data.length)}
-            className="p-2 rounded-full bg-white/80 backdrop-blur-sm border border-zinc-200 hover:bg-white transition-colors flex-shrink-0"
+            className="hidden md:flex p-2 rounded-full bg-white/80 backdrop-blur-sm border border-zinc-200 hover:bg-white transition-colors flex-shrink-0"
           >
             <ChevronRight className="w-5 h-5 text-zinc-600" />
           </button>
@@ -107,7 +116,7 @@ export function Breakout() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4"
+            className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4 cursor-pointer"
             onClick={() => setSelectedProject(null)}
           >
             <motion.div

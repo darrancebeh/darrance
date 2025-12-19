@@ -49,7 +49,7 @@ export function SectionNav() {
           <button
             key={id}
             onClick={() => scrollToSection(id)}
-            className={`w-2 h-2 rounded-full transition-all duration-300 ${
+            className={`w-2 h-2 rounded-full transition-all duration-300 cursor-pointer ${
               activeSection === id
                 ? "bg-zinc-900 scale-150"
                 : "bg-zinc-300 hover:bg-zinc-400 hover:scale-125"
