@@ -10,6 +10,12 @@ export function Hero() {
   const { name, role, bio, sub_bio, metrics, socials, portrait } = PORTFOLIO_DATA.hero;
   const { ticker, exchange } = PORTFOLIO_DATA.header;
   const [currentTime, setCurrentTime] = useState<string>("");
+  
+  // Typewriter effect state
+  const [displayText, setDisplayText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [isHighlighted, setIsHighlighted] = useState(false);
+  const [cycleComplete, setCycleComplete] = useState(false);
 
   useEffect(() => {
     const updateTime = () => {
@@ -23,6 +29,48 @@ export function Hero() {
     const interval = setInterval(updateTime, 60000);
     return () => clearInterval(interval);
   }, []);
+
+  // Typewriter animation
+  useEffect(() => {
+    const fullText = name;
+    const typingSpeed = 80;
+    const deletingSpeed = 40;
+    const pauseAfterTyping = 3000;
+    const pauseAfterDeleting = 1000;
+
+    let timeout: NodeJS.Timeout;
+
+    if (!isDeleting && displayText.length < fullText.length) {
+      // Typing
+      timeout = setTimeout(() => {
+        setDisplayText(fullText.slice(0, displayText.length + 1));
+      }, typingSpeed);
+    } else if (!isDeleting && displayText.length === fullText.length) {
+      // Pause after typing, then start deleting
+      timeout = setTimeout(() => {
+        setIsDeleting(true);
+      }, pauseAfterTyping);
+    } else if (isDeleting && displayText.length > 0) {
+      // Deleting
+      timeout = setTimeout(() => {
+        setDisplayText(fullText.slice(0, displayText.length - 1));
+      }, deletingSpeed);
+    } else if (isDeleting && displayText.length === 0) {
+      // Finished deleting, pause then switch mode
+      timeout = setTimeout(() => {
+        setIsDeleting(false);
+        if (!cycleComplete) {
+          setIsHighlighted(true);
+          setCycleComplete(true);
+        } else {
+          setIsHighlighted(false);
+          setCycleComplete(false);
+        }
+      }, pauseAfterDeleting);
+    }
+
+    return () => clearTimeout(timeout);
+  }, [displayText, isDeleting, isHighlighted, cycleComplete, name]);
 
   return (
     <>
@@ -69,14 +117,18 @@ export function Hero() {
           >
             The Portfolio
           </motion.p>
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-            className="text-5xl md:text-7xl font-sans font-semibold tracking-tighter text-zinc-900 mb-4 text-balance"
+          <h1 
+            className="text-5xl md:text-7xl font-sans font-semibold tracking-tighter mb-4 text-balance"
           >
-            {name}
-          </motion.h1>
+            <span 
+              className={`inline-block ${
+                isHighlighted && displayText.length > 0 ? 'bg-zinc-900 text-[#fafaf9]' : 'text-zinc-900 bg-transparent'
+              }`}
+            >
+              {displayText}
+              <span className="animate-pulse">|</span>
+            </span>
+          </h1>
           <motion.p 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -160,6 +212,12 @@ export function Hero() {
                 style={{ fontFamily: "'Dancing Script', 'Brush Script MT', cursive" }}
               >
                 Darrance
+              </p>
+              <p 
+                className="text-center text-zinc-600 text-xs font-medium tracking-wide leading-none mb-[-0.25rem]"
+                style={{ fontFamily: "'Dancing Script', 'Brush Script MT', cursive" }}
+              >
+                16 December 2025 | My 21st
               </p>
             </div>
           </motion.div>
