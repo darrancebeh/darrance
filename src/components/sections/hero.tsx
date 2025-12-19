@@ -48,6 +48,12 @@ export function Hero() {
         
         {/* The "Identity" Block */}
         <div className="mb-10">
+          <p 
+            className="text-3xl md:text-4xl text-zinc-400 mb-2"
+            style={{ fontFamily: "'Dancing Script', 'Brush Script MT', cursive" }}
+          >
+            The Portfolio
+          </p>
           <h1 className="text-5xl md:text-7xl font-sans font-semibold tracking-tighter text-zinc-900 mb-4 text-balance">
             {name}
           </h1>
