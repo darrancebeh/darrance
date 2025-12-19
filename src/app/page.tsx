@@ -9,7 +9,7 @@ import { Footer } from "@/components/sections/footer";
 
 export default function Portfolio() {
   return (
-    <div className="min-h-screen pb-20">
+    <div className="min-h-screen">
       <Hero />
       <Positions />
       <Thesis />
