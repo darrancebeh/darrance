@@ -238,6 +238,8 @@ export const PORTFOLIO_DATA = {
   navigation: {
     sections: [
       { id: "hero", label: "Intro" },
+      { id: "bio", label: "Bio" },
+      { id: "quotes", label: "Quotes" },
       { id: "positions", label: "Experience" },
       { id: "thesis", label: "Philosophy" },
       { id: "breakout", label: "Research" },
