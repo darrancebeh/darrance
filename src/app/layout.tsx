@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { SectionNav } from "@/components/ui/section-nav";
 import { ScrollProgress } from "@/components/ui/scroll-progress";
+import { Analytics } from "@vercel/analytics/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -49,10 +50,7 @@ export const metadata: Metadata = {
     images: ["/favicon.png"],
   },
   icons: {
-    icon: [
-      { url: '/favicon.ico', sizes: 'any' },
-      { url: '/favicon.png', type: 'image/png' },
-    ],
+    icon: '/favicon.ico',
     apple: '/apple-touch-icon.png',
   },
   robots: {
@@ -109,6 +107,7 @@ export default function RootLayout({
 
         {/* Section Navigation */}
         <SectionNav />
+        <Analytics />
       </body>
     </html>
   );
