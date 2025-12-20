@@ -71,7 +71,7 @@ export default function RootLayout({
       >
         <ScrollProgress />
           {/* --- LAYER 1: Ambient Background Orbs --- */}
-          <div className="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
+          <div className="fixed inset-0 z-[-1] overflow-hidden pointer-events-none hidden md:block">
             {/* Top Left - Subtle Green Glow */}
             <div className="absolute top-0 left-[-10%] w-[500px] h-[500px] bg-momentum-green/15 rounded-full blur-[120px] mix-blend-multiply opacity-50 animate-blob" />
           
@@ -83,10 +83,10 @@ export default function RootLayout({
         </div>
 
         {/* --- LAYER 2: Noise Texture (The "Paper" feel) --- */}
-        <div className="fixed inset-0 z-[-1] bg-noise opacity-50 pointer-events-none" />
+        <div className="fixed inset-0 z-[-1] bg-noise opacity-50 pointer-events-none hidden md:block" />
 
         {/* --- LAYER 2.5: Floating Glassmorphic Elements --- */}
-        <div className="fixed inset-0 z-[0] overflow-hidden pointer-events-none">
+        <div className="fixed inset-0 z-[0] overflow-hidden pointer-events-none hidden md:block">
           {/* Top Right Glass Card */}
           <div className="absolute top-[15%] right-[5%] w-64 h-40 bg-cream-100/40 backdrop-blur-xl border border-zinc-900/10 rounded-2xl rotate-12 shadow-[0_8px_32px_-8px_rgba(0,0,0,0.1)]" />
           

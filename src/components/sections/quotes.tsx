@@ -9,8 +9,8 @@ export function Quotes() {
 
   const quotes = [
     {
-      text: "The market is just a psychological battlefield of human irrationality, disguised as a math problem.",
-      anecdote: "We look at charts and see clean lines, exact decimals, and statistical probabilities. But underneath the data, every price movement is simply the aggregate result of millions of algorithms, irrational decisions, fears, and biases colliding in real-time.",
+      text: "The market is a psychological battlefield of human irrationality, disguised as a math problem.",
+      anecdote: "Trading is like poker. On the surface, we see the cards we are dealt, we see historical charts, we see clean and cold hard facts. But underneath, it’s a table full of irrational actors. We aren't solving a math problem, we're playing the players. Every price tick is simply the aggregate result of millions of algorithms, irrational decisions, fears, and biases colliding in real-time",
       author: "Darrance Beh Heng Shek"
     }
   ];
