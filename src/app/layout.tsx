@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     siteName: "darrancebeh's portfolio",
     images: [
       {
-        url: "/favicon.svg",
+        url: "/favicon.png",
         width: 1200,
         height: 630,
         alt: "darrancebeh - portfolio",
@@ -46,11 +46,14 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "darrancebeh | portfolio",
     description: "Darrance Beh's Personal Portfolio Website.",
-    images: ["/favicon.svg"],
+    images: ["/favicon.png"],
   },
   icons: {
-    icon: "/favicon.svg",
-    apple: "/favicon.svg",
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon.png', type: 'image/png' },
+    ],
+    apple: '/apple-touch-icon.png',
   },
   robots: {
     index: true,
