@@ -50,8 +50,8 @@ export const metadata: Metadata = {
     images: ["/favicon.png"],
   },
   icons: {
-    icon: '/favicon.ico',
-    apple: '/apple-touch-icon.png',
+    icon: '/favicon.png',
+    apple: '/favicon.png',
   },
   robots: {
     index: true,
