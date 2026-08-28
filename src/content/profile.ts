@@ -433,7 +433,7 @@ export type Education = {
 
 export const education: Education[] = [
   {
-    school: "Sunway University",
+    school: "Lancaster-Sunway University",
     degree: "BSc (Hons) Computer Science, Artificial Intelligence",
     grade: "CGPA 3.86 / 4.00",
     detail:
