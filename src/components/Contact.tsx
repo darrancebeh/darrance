@@ -17,7 +17,7 @@ export default function Contact() {
         <Reveal>
           <p className="eyebrow">09 — Contact</p>
           <h2 className="display-lg mt-6 max-w-4xl text-balance">
-            If you are working on something where the data is messy and the stakes are real,
+            Sound like the right fit for a problem you&apos;re solving?
             <span className="font-serif italic text-accent"> let&rsquo;s talk.</span>
           </h2>
         </Reveal>

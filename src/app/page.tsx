@@ -72,7 +72,7 @@ export default function Home() {
         <SectionHeading
           index="05"
           title="Ventures"
-          lede="Organizations I started and ran, where I owned the strategy, the team and the outcome — with nobody above me to escalate to."
+          lede="Initiatives I led and built from the ground up, outside of my professional and academic work."
           accent="text-amber"
         />
         <ExperienceList items={ventures} />

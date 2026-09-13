@@ -7,22 +7,24 @@ export const profile = {
   phone: "(+60) 12 381 1216",
   linkedin: "https://www.linkedin.com/in/darrancebeh/",
   site: "https://darrancebeh.com",
-  headline: "Incoming Strategy & Operations @ PwC SEAC",
+  headline: "2004",
   tagline:
-    "Data without strategic narrative produces paralysis; intuition without quantitative precision produces unhedged risk. I bridge the gap between technical data science and commercial decision-making, turning data into clear, actionable strategies for leadership.",
+    "Spent my childhood maximizing my portfolio value; now I spend my career maximizing shareholder value.",
   intro: [
-    "I'm a Computer Science graduate from Lancaster-Sunway University, majoring in Artificial Intelligence, and I constantly find myself in the intersection of data and strategy.",
-    "At L'Oréal Malaysia-Singapore, I worked in the data team and later in Consumer Market Intelligence, reporting directly to the Chief Financial Officer. I engineered an end-to-end ELT pipeline mapping the consumer lifecycle across the MY-SG cluster, and took a consumer market intelligence pipeline — Nielsen and O+O tracker data into PowerBI semantic models — through to production launch. Regional brand and commercial leadership used it to track share gaps and competitor movement.",
-    "At Citi, I sat in Data Science and Model Management within Independent Compliance Risk Management — writing the Python behind model monitoring and the documentation that makes a model defensible under review, while mapping the team's operational workflows and automating the manual, high-friction steps out of them.",
-    "After I graduate, I will join PwC South East Asia Consulting as an Associate in Strategy & Operations, within the Financial Services practice.",
+    "I'm a first-class honours Computer Science graduate from Lancaster-Sunway University, majoring in Artificial Intelligence, and I constantly find myself in the intersection of data and strategy.",
+    "During my academic life, I have been fortunate to have had the opportunity to work with some of the world's leading organizations, including Citi and L'Oréal, where I gained hands-on experience in data science, analytics, and market intelligence.",
+    "Internships aside, I have also been actively involved in leadership roles, having co-led a 50-person committee to the university's Most Outstanding Club Award for non-sport clubs, and founded and directed a team of 16 analysts to form the proprietary research arm of the Sunway Business Investment Society.",
+    "I also have a reputation for being the 'go-to' person for anything market-related, specifically in trading and investing. I have been running my own trading portfolio since the age of 15, and have founded several social initiatives in the space. Most famously, I managed to scale an initial capital of RM600 into more than 6-figures from 2020 to 2025, successfully funding a fully paid-for tuition and comfortable lifestyle for present me.",
   ],
 } as const;
 
 export const statement = {
   paragraphs: [
-    "I have always found that the most consequential decisions live in the tension between rigorous data and human conviction.",
-    "It isn't enough to run the analysis and hand off a deck. The real challenge is uncovering where the economic reality of a problem truly lies, pressure-testing the assumptions, and structuring an argument that withstands scrutiny — whether from cross-functional stakeholders or from the boardroom.",
-    "I specialize in taking messy, complex systems — market data, operational bottlenecks, strategic trade-offs — and distilling them into clear, actionable mandates that leadership can confidently back.",
+    "I have always found that the most consequential decisions live in the tension between data and conviction.",
+    "Be it in the equities market, where sole conviction without data can lead to asymmetrical downside risk, or in the boardroom, where a single misjudged assumption can cost millions, I have learned that the ability to navigate this tension is what separates good decisions from great ones.",
+    "A dashboard or deck is useless if it only captures the surface. Real leverage comes from exposing the core mechanics of a problem, stress-testing assumptions and risks, and structuring an argument and actionable plan robust enough to drive measurable upside.",
+    "My focus is in translating complex environments - unstructured market data, operational bottlenecks, strategic trade-offs — and distilling them into clear, actionable mandates and roadmaps that leadership can confidently back and act on.",
+    "Simply put, I'm obsessed with optimization and building efficient systems."
   ],
 } as const;
 
@@ -46,8 +48,8 @@ export const workedWithLabel = "Worked with";
 export const workedWith: Logo[] = [
   {
     name: "PwC",
-    src: "/logos/pwc.png",
-    height: 45,
+    src: "/logos/pwc.svg",
+    height: 80,
     color: "#F2691E",
     href: "https://www.pwc.com/",
   },
@@ -110,10 +112,10 @@ export const professional: Experience[] = [
     blurb:
       "Citi Independent Compliance Risk Management, Kuala Lumpur Citi Service Center.",
     points: [
-      "Responsible for individual workstreams end-to-end — from understanding the business context, to designing the solution, to implementing it and handing it off to the team.",
-      "Contributed to the model management workstream directly — writing the Python that prepared, reconciled and quality-checked the data behind model monitoring, and producing the recurring outputs the governance cycle runs on.",
-      "Mapped the operational workflows the team ran on — how work moved between people, which steps were still being done by hand, and where the friction sat.",
-      "Built automation systems for rigid, manual, high-friction steps, taking repeat effort out of recurring processes, leading to time savings and reduced operational risk.",
+      "Responsible for individual workstreams end-to-end - from understanding the problem context, to designing the solution, to implementing it and handing it off to the team.",
+      "Mapped the operational workflows the team ran on, i.e., how work moved between people, which steps were still being done by hand, and identified efficiency opportunities.",
+      "Built Python automation systems for rigid, manual, high-friction steps, taking repeat effort out of recurring processes, leading to time savings and reduced operational risk.",
+      "Proactively networked across business units and senior leadership throughout the internship to understand functional roles, organizational context, and upstream/downstream project interdependencies. This allowed me to understand the broader context of how a highly regulated bank runs.",
       "Specifics of the work sit under confidentiality. The above describes scope rather than deliverables.",
     ],
     tags: [
@@ -135,8 +137,8 @@ export const professional: Experience[] = [
     blurb:
       "Reported directly to the Chief Financial Officer. Rotation from Data Science to Consumer Market Intelligence as part of internship extension offer.",
     points: [
-      "Owned an internal Consumer Market Intelligence ETL pipeline through to production launch, integrating Nielsen and O+O market tracker datasets into PowerBI semantic models — giving regional leaders a live read on share gaps, competitor movement, and where brand positioning needed to change.",
-      "Engineered an end-to-end ELT pipeline mapping the full consumer lifecycle across the MY-SG cluster, turning millions of transaction touchpoints into the behavioral metrics — basket spend, channel migration, brand-product penetration — that redirected marketing spend and acquisition strategy.",
+      "Owned an internal Consumer Market Intelligence ETL pipeline through to production launch, integrating Nielsen and O+O market tracker datasets into PowerBI semantic models, giving regional leaders a live read on share gaps, competitor movement, and where brand positioning needed to change.",
+      "Engineered an end-to-end ELT pipeline mapping the full consumer lifecycle across the MY-SG cluster, turning millions of transaction touchpoints into the behavioral metrics, e.g., basket spend, channel migration, brand-product penetration, that informed targeted marketing spend and acquisition strategy.",
       "Drove the resolution of ambiguous commercial problems by formulating and testing data-driven hypotheses, deploying statistical analyses and quantitative models that bridge L'Oréal's vast data ecosystem with commercial strategy to inform leadership with high-conviction, time-sensitive insights.",
       "Owned and optimized stakeholder-facing PowerBI workspaces, tracking workspace adoption metrics to systematically decommission and optimize underutilized reports, and present high-level performance insights to leadership.",
     ],
@@ -287,10 +289,9 @@ export const ventures: Experience[] = [
     kind: "venture",
     href: "https://steamcommunity.com/id/darrancebeh",
     blurb:
-      "Three years market-making digital goods on Steam's exchange, starting at fifteen. My first education in spreads, liquidity and incentives, run at a volume that made the lessons unavoidable.",
+      "Three years market-making digital assets on the Steam Community Market exchange, leveraging previous market illiquidity and inefficiencies to arbitrage bid-ask spreads and cross-exchange mispricings.",
     points: [
-      "Over 60,000 market transactions and 11,000 trades across the period, working bid-ask spread arbitrage and cross-exchange inefficiencies.",
-      "A market with no professional participants, no reference pricing and very thin information — which is where I learned to build a view from incomplete data and size it against being wrong.",
+      "Over 60,000 market transactions and 11,000 trades across the period, leveraging bid-ask spread arbitrage and cross-exchange pricing inefficiencies.",
       "The foundation for everything I later formalized in equities and derivatives.",
     ],
     links: [
@@ -308,7 +309,7 @@ export const ventures: Experience[] = [
     blurb:
       "Two communities I solo-founded and built at 16, during the COVID-19 lockdown. VALORANT Malaysia reached 8,000 members in four months and was acquired into Riot Games' official VALORANT Asia server; The Coffee Shop became the fastest-growing MY/SG social server of its era.",
     points: [
-      "Identified a gap in the market, twice - and built a solution that successfully scaled to fill it — organically.",
+      "Identified a gap in the market, twice - and built a solution that successfully scaled to fill it organically.",
       "Solo-founded and scaled two of the largest online communities of its time, with unprecedented growth and activity during its time.",
       "VALORANT Malaysia reached 8,000 members in four months; The Coffee Shop was one of the most active social servers of its time, with several months of >20,000 messages a day.",
       "VALORANT Malaysia was acquired into Riot Games' official VALORANT Asia server, and The Coffee Shop became the fastest-growing MY/SG social server of its era.",
@@ -439,7 +440,7 @@ export const education: Education[] = [
     detail:
       "Specialization in Big Data & Artificial Intelligence. Dual award with Lancaster University.",
     points: [
-      "Awarded the highest quantum of the Jeffrey Cheah Entrance Scholarship, granted on pre-admission academic record.",
+      "Awarded the Jeffrey Cheah Entrance Scholarship.",
       "Final-year Capstone Project: a proxy-robust comparison of GARCH-family econometric models against LSTM deep learning for volatility forecasting in US equities.",
       "Consecutive Dean's List awardee for all semesters.",
     ],
@@ -450,6 +451,8 @@ export const education: Education[] = [
     school: "Multimedia University",
     degree: "Foundation in Information Technology",
     grade: "CGPA 3.81 / 4.00",
+    detail:
+      "First-class honours.",
     points: [
       "Consecutive Dean's List awardee for all 3 semesters.",
     ],
@@ -494,10 +497,11 @@ export const certifications = [
 
 export const facts: string[] = [
   "First and only person from my university to secure internships at both Citi and L'Oréal's data team.",
+  "Fully self-funded my own undergraduate degree through a trading portfolio I started at 15, which has since grown to more than 6-figures.",
+  "Founded 2 of the largest online Discord communities of its time in Malaysia during COVID-19, with unprecedented growth and activity during its time.",
   "Reported directly to a CFO as an intern, with projects run in front of C-suite and director-level stakeholders.",
   "Directed a 17-analyst research team and co-led a 50-person committee to the university's Most Outstanding Club Award.",
-  "Former state-level debater and public speaker; I've emceed, moderated or pitched for four different organizations.",
-  "Funded my own degree through a portfolio I started at 15 — a useful early lesson that conviction has to survive contact with real money.",
+  "Former state-level debater and public speaker; communicating and articulating my thoughts in high-stakes environments is a skill I take pride in.",
 ];
 
 export const bio = {

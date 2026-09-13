@@ -7,8 +7,8 @@ export default function Toolkit() {
     <section id="toolkit" className="mx-auto max-w-[1400px] px-5 py-24 sm:px-8 sm:py-32">
       <SectionHeading
         index="07"
-        title="Toolkit & recognition"
-        lede="What I reach for when a problem lands on my desk, and what it has been worth so far."
+        title="Technical Skillset"
+        lede="In case you were wondering what I can do, technically."
       />
 
       <div className="mt-14 grid gap-14 md:grid-cols-12 md:gap-10">
